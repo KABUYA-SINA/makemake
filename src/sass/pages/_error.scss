@@ -1,0 +1,37 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.top-parent {
+    display: contents;
+
+    .content {
+        .main-error {
+            &__pages {
+                height: 350px;
+                @include dispaly-all;
+                gap: 30px;
+
+                h1 {
+                    font-size: 32px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                a {
+                    color: $black-color;
+
+                    & .btn-error {
+                        cursor: pointer;
+                        padding: nth($padding, 1) 10px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        border: 1px solid $black-color;
+                        @include shadow;
+                    }
+                }
+            }
+        }
+    }
+}
