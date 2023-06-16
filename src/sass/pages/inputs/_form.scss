@@ -1,0 +1,33 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.form-group {
+    @include display-flex-direction;
+    margin: nth($margin, 4) 0;
+
+    // input[type="range"] {
+    //     width: 100%;
+    // }
+
+    // input[type="number"] {
+    //     width: 60%;
+    //     border: 1px solid #ced4da;
+    //     border-radius: 0.25rem;
+    //     padding: nth($padding, 1);
+    // }
+
+    & .alert {
+        font-size: 12px;
+        padding: nth($padding, 1)-2;
+        color: red;
+        display: none;
+    }
+
+    input:invalid[focused="true"]~.alert {
+        display: block;
+    }
+
+    input:invalid[focused="true"] {
+        border: 1px solid red;
+    }
+}
