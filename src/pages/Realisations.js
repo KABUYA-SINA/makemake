@@ -3,12 +3,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../sass/base/_base.scss';
 
-export const Home = () => {
+export const Realisation = () => {
   return (
-    <div className='home-container'>
-        <Header />
-        <Footer/>
+    <div className='realisation-container'>
+      <Header />
+      <Footer />
     </div>
   )
 }
-export default Home;
+export default Realisation;

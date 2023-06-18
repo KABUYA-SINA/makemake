@@ -6,6 +6,7 @@ import '../sass/base/_footer.scss'
 import '../sass/layout/_footer.scss'
 
 export const Footer = () => {
+  //const [choiceClient, setChoiceClient] = useState('')
   const [valuesInputs, setValuesInputs] = useState({
     name: '',
     prenom: '',
@@ -43,82 +44,107 @@ export const Footer = () => {
     }
   ]
   const firstColumn = inputs.slice(0, 2)
-  console.log(firstColumn)
   const lastOfInputs = inputs.slice(2, 3)
-  console.log(lastOfInputs)
-  const onChange = (e) =>{
-      setValuesInputs({...valuesInputs, [e.target.name]: e.target.value})
-    }
-  return (
-    <div className='footer-container'>
-        <h1>parlons de votre projet ?</h1>
-        <div className="footer_fom">
-          <div className="footer-img">
-            <img src={FooterImg} alt='people on moon talikng' /> 
-          </div>
-          <div className='for_form'>
-            <form className='for_form--inputs'>
-              <div className="first-for__form">
-                {firstColumn.map((input) => (
-                        <FormInput key={input.id} {...input} value={valuesInputs[input.name] || ''} onChange={onChange} className="form-input"/>
-                    ))}
-              </div>
-              <div className="second-for__form">
-                {lastOfInputs.map((input) => (
-                          <FormInput key={input.id} {...input} value={valuesInputs[input.name] || ''} onChange={onChange} className="form-input"/>
-                      ))}
-              </div>
-              <div className='select-options'>
-                <select>
-                  <option value={''}>Sur quel(s) sujet(s) aimeriez-vous échanger ?</option>
-                  <option value="identité de marque">Identité de marque</option>
-                  <option value="Réseaux sociaux">Réseaux sociaux</option>
-                  <option value="Support print">Support print</option>
-                  <option value="Photo ou vidéo">Photo ou vidéo</option>
-                  <option value="Logo + charte">Logo + charte</option>
-                  <option value="Site web">Site web</option>
-                  <option value="Edition/magazine">Edition/magazine</option>
-                  <option value="Autre">Autre</option>
-                </select>
-              </div>
-            </form>
 
+  const onChange = (e) =>{
+    setValuesInputs({...valuesInputs, [e.target.name]: e.target.value})
+  }
+
+  //const elementSelected = document.querySelector('select')
+  // elementSelected.addEventListener('change', (e) => {
+  //   const result = document.querySelector('.result');
+  //   result.textContent = `${e.target.value}`;
+  // })
+
+  return (
+    <footer>
+      <div className='footer-container'>
+          <h1>parlons de votre projet ?</h1>
+          <div className="footer_fom">
+            <div className="footer-img">
+              <img src={FooterImg} alt='people on moon talikng' /> 
+            </div>
+            <div className='for_form'>
+              <form className='for_form--inputs'>
+                <div className="first-for__form">
+                  {firstColumn.map((input) => (
+                      <FormInput key={input.id} {...input} value={valuesInputs[input.name] || ''} onChange={onChange} className="form-input"/>
+                    ))
+                  }
+                </div>
+                <div className="second-for__form">
+                  {lastOfInputs.map((input) => (
+                      <FormInput key={input.id} {...input} value={valuesInputs[input.name] || ''} onChange={onChange} className="form-input"/>
+                    ))
+                  }
+                </div>
+                <div className='select-options'>
+                  {/* <div className="result"></div> */}
+                  <select className='select-group'>
+                    <option value={''}>Sur quel(s) sujet(s) aimeriez-vous échanger ?</option>
+                    <option value="identité de marque">Identité de marque</option>
+                    <option value="Réseaux sociaux">Réseaux sociaux</option>
+                    <option value="Support print">Support print</option>
+                    <option value="Photo ou vidéo">Photo ou vidéo</option>
+                    <option value="Logo + charte">Logo + charte</option>
+                    <option value="Site web">Site web</option>
+                    <option value="Edition/magazine">Edition/magazine</option>
+                    <option value="Autre">Autre</option>
+                  </select>
+                </div>
+                <div className="textarea">
+                  <h2 className='label-footer'>Message</h2>
+                  <TextArea />
+                </div>
+                <div className="btn-form">
+                  <button type="submit" className='btn-submit'>Envoyez</button>
+                </div>
+              </form>
+
+            </div>
           </div>
-        </div>
-        <div className="footer_details">
-          <h2>Créer une identité de marque mémorale et authentique</h2>
-          <div className='footer_elements'>
-            <div className="footer_elements-first">
-              <h3>Contact</h3>
-              <ol>
-                <li>Instagram</li>
-                <li>LinkedIn</li>
-                <li>Facebook</li>
-              </ol>
+          <div className="footer_details">
+            <div className="text-more">
+              <div className="text-more_child">
+                <span className="text-more_break">Créer une identité</span>
+                <span className="text-more_break">de marque mémorale</span>
+                <span className="text-more_break">et authentique</span>
+              </div>
+              <span className='text-more__span'>By KrisCartel House</span>
             </div>
-            <div className="footer_elements-second">
-              <h3>Infos</h3>
-              <ol>
-                <li>Studio</li>
-                <li>Services</li>
-                <li>Réalisations</li>
-                <li>Services</li>
-              </ol>
-            </div>
-            <div className="footer_elements-third">
-              <h3>Autre</h3>
-              <ol>
-                <li>Mentions</li>
-                <li>CGV</li>
-                <li>FAQs</li>
-              </ol>
+            <div className='footer_elements'>
+              <div className="footer_elements-first">
+                <h3>Contact</h3>
+                <ol>
+                  <li>Instagram</li>
+                  <li>LinkedIn</li>
+                  <li>Facebook</li>
+                </ol>
+              </div>
+              <div className="footer_elements-second">
+                <h3>Infos</h3>
+                <ol>
+                  <li>Studio</li>
+                  <li>Services</li>
+                  <li>Réalisations</li>
+                  <li>Services</li>
+                </ol>
+              </div>
+              <div className="footer_elements-third">
+                <h3>Autre</h3>
+                <ol>
+                  <li>Mentions</li>
+                  <li>CGV</li>
+                  <li>FAQs</li>
+                </ol>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="footer-text">
-          <span>By KrisCartel House</span>
-        </div>
-    </div>
+          {/* <div className="footer-text">
+            <span>By KrisCartel House</span>
+          </div> */}
+      </div>
+    </footer>
   )
 }
 export default Footer
