@@ -17,10 +17,14 @@ footer{
             font-size: 17px;
             font-weight: 600;
         }
-        p, span, li{
+        p, span, li, .btn-submit{
             font-size: 14px;
         }
-        & .text-more__span, .label-footer, & .result{
+        & .text-more__span, .label-footer,
+        & .for_form--inputs > input, .form-input,
+        & .css-wsp0cs-MultiValueGeneric,
+        & .css-1jqq78o-placeholder,
+        & .css-1nmdiq5-menu{
             font-size: 12px;
             font-weight: 300;
         }

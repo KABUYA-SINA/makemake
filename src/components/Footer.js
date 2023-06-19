@@ -4,9 +4,10 @@ import FormInput from './FormInputs'
 import TextArea from './TextArea'
 import '../sass/base/_footer.scss'
 import '../sass/layout/_footer.scss'
+import Selected from './Selected'
 
 export const Footer = () => {
-  //const [choiceClient, setChoiceClient] = useState('')
+
   const [valuesInputs, setValuesInputs] = useState({
     name: '',
     prenom: '',
@@ -50,12 +51,6 @@ export const Footer = () => {
     setValuesInputs({...valuesInputs, [e.target.name]: e.target.value})
   }
 
-  //const elementSelected = document.querySelector('select')
-  // elementSelected.addEventListener('change', (e) => {
-  //   const result = document.querySelector('.result');
-  //   result.textContent = `${e.target.value}`;
-  // })
-
   return (
     <footer>
       <div className='footer-container'>
@@ -79,18 +74,7 @@ export const Footer = () => {
                   }
                 </div>
                 <div className='select-options'>
-                  {/* <div className="result"></div> */}
-                  <select className='select-group'>
-                    <option value={''}>Sur quel(s) sujet(s) aimeriez-vous échanger ?</option>
-                    <option value="identité de marque">Identité de marque</option>
-                    <option value="Réseaux sociaux">Réseaux sociaux</option>
-                    <option value="Support print">Support print</option>
-                    <option value="Photo ou vidéo">Photo ou vidéo</option>
-                    <option value="Logo + charte">Logo + charte</option>
-                    <option value="Site web">Site web</option>
-                    <option value="Edition/magazine">Edition/magazine</option>
-                    <option value="Autre">Autre</option>
-                  </select>
+                  <Selected />
                 </div>
                 <div className="textarea">
                   <h2 className='label-footer'>Message</h2>

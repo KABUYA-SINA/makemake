@@ -29,7 +29,8 @@
             display: flex;
             justify-content: center;
             & .for_form--inputs{
-                width: 60%; //80
+                width: 60%;
+                overflow: hidden;
                 & .first-for__form{
                     display: flex;
                     gap: 50px;
@@ -47,15 +48,44 @@
                     }
                 }
                 & .select-options{
-                    & .result {
-                        background: $seclect-color;
-                        color: $white-color;
-                        padding: nth($padding, 1);
-                    }
                     & .select-group{
                         border-bottom: solid 2px $footer-text-underline;
                         padding: nth($padding, 2) 0;
                         width: 100%;
+                        & .select-group_child{
+                            & .css-13cymwt-control{
+                                border: none;
+                                background-color: $first-color;
+                            }
+                            & .css-t3ipsp-control:hover, .css-t3ipsp-control{
+                                border: none;
+                                box-shadow: none;
+                                background-color: $first-color;
+                            }
+                            & .css-1p3m7a8-multiValue{
+                                justify-content: space-between;
+                                background: $seclect-color;
+                                padding: nth($padding, 1);
+                                width: 100%;
+                                & .css-wsp0cs-MultiValueGeneric{
+                                    color: $white-color;
+                                }
+                                & .css-12a83d4-MultiValueRemove{
+                                    border-radius: 50%;
+                                    background: transparent;
+                                    font-size: larger;
+                                }
+                                & .css-tj5bde-Svg{
+                                    background: $white-color;
+                                    border-radius: 50%;
+                                    fill: $seclect-color;
+                                    stroke-width: 1px;
+                                }
+                                & .css-12a83d4-MultiValueRemove:hover{
+                                    color: $seclect-color;
+                                }
+                            }
+                        }
                     }
                 }
                 & .textarea{
