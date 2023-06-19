@@ -16,13 +16,13 @@ const Selected = () => {
     let handleChange = (optionSelected) => {
         setOptionSelected(optionSelected.value);
     };
-  return (
-    <div className="select-group">
-      <div className="select-group_child">
-        <Select placeholder="Sur quel(s) sujet(s) aimeriez-vous échanger ?" isMulti onChange={handleChange} options={options} />
-      </div>
-    </div>
-  )
+    return (
+        <div className="select-group">
+        <div className="select-group_child">
+            <Select placeholder="Sur quel(s) sujet(s) aimeriez-vous échanger ?" isMulti onChange={handleChange} options={options} />
+        </div>
+        </div>
+    )
 }
 
 export default Selected
