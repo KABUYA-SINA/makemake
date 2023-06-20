@@ -4,21 +4,22 @@
 footer{
     & .footer-container{
         h1{
-            font-size: 27px;
+            font-size: 25px;
+
         }
         h2, .text-more_break{
-            font-size: 25px;
+            font-size: 23px;
             font-weight: 500;
         }
         & .text-more_break{
             line-height: 25px;
         }
         h3{
-            font-size: 17px;
+            font-size: 15px;
             font-weight: 600;
         }
         p, span, li, .btn-submit{
-            font-size: 14px;
+            font-size: 13px;
         }
         & .text-more__span, .label-footer,
         & .for_form--inputs > input, .form-input,

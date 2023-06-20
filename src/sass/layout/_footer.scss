@@ -16,8 +16,19 @@
         display: flex;
         width: 100%;
         padding-bottom: nth($padding , 4)*6;
+            @include mobile{
+                flex-direction: column;
+            }
+            @include tablet {
+                flex-direction: row;
+            }
         & .footer-img{
-            width: 50%;
+                @include mobile{
+                    width: 100%;
+                }
+                @include tablet{
+                    width: 50%;
+                }
             img {
                 object-fit: cover;
                 width: 100%;
@@ -25,12 +36,22 @@
             }
         }
         & .for_form{
-            width: 50%;
             display: flex;
             justify-content: center;
+                @include mobile{
+                    width: 100%;
+                }
+                @include tablet{
+                    width: 50%;
+                }
             & .for_form--inputs{
-                width: 60%;
                 overflow: hidden;
+                    @include mobile{
+                        width: 80%;
+                    }
+                    @include tablet{
+                        width: 60%;
+                    }
                 & .first-for__form{
                     display: flex;
                     gap: 50px;
@@ -114,12 +135,25 @@
         display: flex;
         justify-content: space-around;
         border-top: solid 2px $footer-color;
-        padding: nth($padding, 2)*8;
+        padding: nth($padding, 2)*8 0;
+            @include mobile{
+                flex-direction: column-reverse;
+            }
+            @include tablet{
+                flex-direction: row;
+            }
         & .text-more{
             height: 200px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            @include mobile{
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            @include tablet{
+                align-items: flex-start;
+                justify-content: space-between;
+            }
             & .text-more_child{
                 display: flex;
                 flex-direction: column;
@@ -131,6 +165,14 @@
             justify-content: flex-end;
             gap: 50px;
             width: 50%;
+                @include mobile{
+                    width: 100%;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+                @include tablet{
+                    width: 50%;
+                }
             & .footer_elements-first, & .footer_elements-second, & .footer_elements-third{
                 height: 100%;
                 h3{

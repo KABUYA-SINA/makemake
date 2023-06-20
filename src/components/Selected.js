@@ -18,9 +18,9 @@ const Selected = () => {
     };
     return (
         <div className="select-group">
-        <div className="select-group_child">
-            <Select placeholder="Sur quel(s) sujet(s) aimeriez-vous échanger ?" isMulti onChange={handleChange} options={options} />
-        </div>
+            <div className="select-group_child">
+                <Select placeholder="Sur quel(s) sujet(s) aimeriez-vous échanger ?" isMulti onChange={handleChange} options={options} />
+            </div>
         </div>
     )
 }
