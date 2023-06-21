@@ -5,6 +5,7 @@ import TextArea from './TextArea'
 import '../sass/base/_footer.scss'
 import '../sass/layout/_footer.scss'
 import Selected from './Selected'
+import IconsApplication from './IconsApplication'
 
 export const Footer = () => {
 
@@ -94,6 +95,7 @@ export const Footer = () => {
                 <span className="text-more_break">de marque mémorale</span>
                 <span className="text-more_break">et authentique</span>
               </div>
+              {/* <IconsApplication /> */}
               <span className='text-more__span'>By KrisCartel House</span>
             </div>
             <div className='footer_elements'>
@@ -124,9 +126,6 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          {/* <div className="footer-text">
-            <span>By KrisCartel House</span>
-          </div> */}
       </div>
     </footer>
   )

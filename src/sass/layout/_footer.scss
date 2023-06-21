@@ -157,6 +157,12 @@
             & .text-more_child{
                 display: flex;
                 flex-direction: column;
+                @include mobile{
+                    align-items: center;
+                }
+                @include tablet{
+                    align-items: flex-start;
+                }
             }
         }
         & .footer_elements{
