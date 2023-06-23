@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../images/header.webp'
 import { Link, NavLink } from 'react-router-dom'
 import '../sass/layout/_header.scss'
@@ -14,7 +14,7 @@ export const Header = () => {
                 </Link>
             </div>
             <nav>
-                <ul>
+                <ul className='header-nav__ul'>
                     <li>
                         <NavLink href='../pages/Studio.js' to="/studio" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
                             Studio
@@ -36,6 +36,11 @@ export const Header = () => {
                         </NavLink>
                     </li>
                 </ul>
+                <div className="hamburger">
+                    <div className="bar" ></div>
+                    <div className="bar"></div>
+                    <div className="bar" ></div>
+                </div>
             </nav>
         </div>
     </header>

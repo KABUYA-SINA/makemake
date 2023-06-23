@@ -143,16 +143,25 @@
                 flex-direction: row;
             }
         & .text-more{
-            height: 200px;
             display: flex;
             flex-direction: column;
             @include mobile{
                 align-items: center;
                 justify-content: space-evenly;
+                height: 300px;
             }
             @include tablet{
                 align-items: flex-start;
                 justify-content: space-between;
+                height: 200px;
+            }
+            & .exception-react{
+                @include mobile{
+                    width: 30%;
+                }
+                @include tablet{
+                    width: 45%;
+                }
             }
             & .text-more_child{
                 display: flex;

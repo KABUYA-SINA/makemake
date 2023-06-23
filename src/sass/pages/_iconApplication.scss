@@ -2,11 +2,17 @@
 @import '../utils/mixins';
 
 .icon-container{
-    border: solid red;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 30%;
+        @include mobile{
+            justify-content: space-evenly;
+        }
+        @include tablet{
+            justify-content: space-between;
+        }
+    & a{
+        color: $black-color
+    }
     & svg{
         font-size: 25px;
     }

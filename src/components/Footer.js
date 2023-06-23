@@ -95,6 +95,9 @@ export const Footer = () => {
                 <span className="text-more_break">de marque mémorale</span>
                 <span className="text-more_break">et authentique</span>
               </div>
+              <div className='exception-react'>
+                  <IconsApplication />
+              </div>
               {/* <IconsApplication /> */}
               <span className='text-more__span'>By KrisCartel House</span>
             </div>
