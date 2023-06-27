@@ -132,6 +132,7 @@
     }
     & .footer_details{
         width: 80%;
+        overflow: hidden;
         display: flex;
         justify-content: space-around;
         border-top: solid 2px $footer-color;
@@ -157,7 +158,7 @@
             }
             & .exception-react{
                 @include mobile{
-                    width: 30%;
+                    width: 50%;  //30
                 }
                 @include tablet{
                     width: 45%;

@@ -44,7 +44,7 @@
             align-items: center;
                 @include mobile{
                     position: fixed;
-                    left: -100%;
+                    left: 100%;
                     top: 0;
                     gap: 40px;
                     flex-direction: column;
@@ -56,7 +56,7 @@
                     background: $white-color;
                     z-index: 1;
                 }
-                @include ordi {
+                @include ordiBurger {
                     justify-content: center;
                     position: relative;
                     left: 0;
@@ -72,7 +72,7 @@
                     padding: nth($padding, 4);
                     width: 100%;
                 }
-                @include ordi{
+                @include ordiBurger{
                     display: none;
                 }
             }
@@ -125,7 +125,7 @@
         display: block;
     }
 
-    @include ordi {
+    @include ordiBurger {
         display: none;
     }
 }

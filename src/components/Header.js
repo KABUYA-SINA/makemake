@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Logo from '../images/header.webp'
 import { Link, NavLink } from 'react-router-dom';
-import {FaBars, FaTimes} from 'react-icons/fa'
+import {RxHamburgerMenu} from 'react-icons/rx'
+import {BsXLg} from 'react-icons/bs'
 import '../sass/layout/_header.scss'
 
 export const Header = () => {
@@ -22,7 +23,7 @@ export const Header = () => {
                 <nav>
                     <ul className={ burger ? 'header-nav__ul active ' : ' header-nav__ul'}>
                         <div className="burger-next" onClick={handleBurger}>
-                            {burger ? <FaTimes size={30}/> : '' }
+                            {burger ? <BsXLg size={30}/> : '' }
                         </div>
                         <li>
                             <NavLink href='../pages/Studio.js' to="/studio" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
@@ -47,7 +48,7 @@ export const Header = () => {
                     </ul>
                 </nav>
                 <div className="hamburger" onClick={handleBurger}>
-                    {burger ? '' : <FaBars size={30}/> }
+                    {burger ? '' : <RxHamburgerMenu size={30}/> }
                 </div>
             </div>
         </header>

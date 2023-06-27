@@ -16,6 +16,12 @@
     }
 }
 
+@mixin ordiBurger {
+    @media screen and (min-width: map-get($breakpoints, ordiBurger)) {
+        @content;
+    }
+}
+
 @mixin largeOrdi {
     @media screen and (min-width: map-get($breakpoints, largeOrdi)) {
         @content;
