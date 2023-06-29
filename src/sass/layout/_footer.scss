@@ -9,7 +9,7 @@
     flex-direction: column;
     background: $first-color;
     h1{
-        padding: nth($padding, 4)*2;
+        padding: nth($padding, 4)*10 0 nth($padding, 4)*7 0;
         text-transform: uppercase;
     }
     & .footer_fom{
@@ -125,6 +125,7 @@
                     & .btn-submit{
                         text-transform: uppercase;
                         border-bottom: solid 2px $black-color;
+                        cursor: pointer;
                     }
                 }
             }
