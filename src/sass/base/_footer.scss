@@ -3,8 +3,13 @@
 
 footer{
     & .footer-container{
+        & .for_form, & .form-group input:invalid[focused=true], & .form-input {
+            font-family: 'Gotham Light';
+        }
         h1{
             font-size: 25px;
+            font-family: 'Gotham Bold';
+            letter-spacing: 1px;
 
         }
         h2, .text-more_break{
@@ -12,7 +17,19 @@ footer{
             font-weight: 500;
         }
         & .text-more_break{
+            font-family: 'Blaak Thin';
             line-height: 25px;
+            letter-spacing: 1px;
+        }
+        & .footer_elements-first,
+        & .footer_elements-second,
+        & .footer_elements-third{
+            h3{
+                font-family: 'Gotham Bold';
+            }
+            li{
+                font-family: 'Gotham Light';
+            }
         }
         h3{
             font-size: 15px;

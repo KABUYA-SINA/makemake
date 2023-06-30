@@ -7,7 +7,7 @@ export const TextArea = (props) => {
             id="textarea"
             name="textarea"
             maxLength={200}
-            rows="5" cols="50"
+            rows="10" cols="50"
             className="form-input"
             placeholder={props.placeholder}
             onChange={(e) => props.setTextAreaValues(e.target.value)}

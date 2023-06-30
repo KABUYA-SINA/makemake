@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@font-face {
+    font-family: 'Gotham Light';
+    src: url('../../../public/fonts/Gotham\ Light.otf');
+}
+@font-face {
+    font-family:'Blaak Thin';
+    src: url('../../../public/fonts/BlaakThin_PERSONAL.ttf');
+}
+@font-face {
+    font-family: 'NiteClub Normal';
+    src: url('../../../public/fonts/NITECLUB.TTF');
+}
+@font-face {
+    font-family:'Gotham Bold' ;
+    src: url('../../../public/fonts/Gotham\ Bold.otf');
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +23,6 @@
     box-sizing: border-box;
     vertical-align: baseline;
     background: transparent;
-    font-family: 'Poppins', sans-serif;
 }
 
 

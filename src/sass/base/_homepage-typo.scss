@@ -1,0 +1,47 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.main-homepage {
+    & .exception-homepage{
+        font-family: 'Blaak Thin';
+        & .exception-element {
+            font-size: 50px;
+            font-weight: 400;
+        }
+    }
+    & .first-element__homepage{
+        & .first-element__text{
+            font-family: 'Gotham Light';
+            h2 {
+                font-family: 'NiteClub Normal';
+                font-weight: 400;
+            }
+        }
+
+    }
+    & .second-element__homepage{
+        & .second-element__homepage--images {
+            & .second-element__first--image {
+                font-family: 'Gotham Bold';
+                a{
+                    & .second-element__all--text{
+                        & p{
+                            font-weight: 700;
+                        }
+                    }
+                }
+                & .second-element__title {
+                    font-weight: 700;
+                }
+            }
+        }
+        
+    }
+    & .third-element__homepage{
+        h2{
+            font-family: 'NiteClub Normal';
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+    }
+}

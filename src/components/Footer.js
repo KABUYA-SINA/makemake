@@ -8,7 +8,7 @@ import Selected from './Selected'
 import IconsApplication from './IconsApplication'
 
 export const Footer = () => {
-
+  const [textareaValues, setTextAreaValues] = useState('')
   const [valuesInputs, setValuesInputs] = useState({
     name: '',
     prenom: '',
@@ -79,7 +79,7 @@ export const Footer = () => {
                 </div>
                 <div className="textarea">
                   <h2 className='label-footer'>Message</h2>
-                  <TextArea />
+                  <TextArea setTextAreaValues={setTextAreaValues} value={textareaValues}/>
                 </div>
                 <div className="btn-form">
                   <button type="submit" className='btn-submit'>Envoyez</button>

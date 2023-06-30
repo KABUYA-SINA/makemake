@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../sass/pages/main/_homepage.scss';
+import { Link } from 'react-router-dom';
 import FirstImage from '../../images/first_img_homepage.webp';
 import SecondImage from '../../images/home_one.webp';
 import ThridImage from '../../images/home_two.webp';
@@ -7,7 +7,9 @@ import FourthImage from '../../images/home_three.webp';
 import FithImage from '../../images/home_four.webp';
 import SixthImage from '../../images/home_five.webp';
 import SevenImage from '../../images/home_six.webp';
-import { Link } from 'react-router-dom';
+import '../../sass/pages/main/_homepage.scss';
+import '../../sass/base/_homepage-typo.scss';
+
 
 const Homepage = () => {
   return (
@@ -96,7 +98,7 @@ const Homepage = () => {
             </div>
         </section>
         <section className='third-element__homepage'>
-            <h3>Expertises</h3>
+            <h2>Expertises</h2>
             <div className="third-element__homepage--images">
                 <img src={SixthImage} alt='cosmonaute' />
             </div>

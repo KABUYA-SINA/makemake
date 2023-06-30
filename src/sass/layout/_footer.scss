@@ -77,6 +77,9 @@
                             & .css-13cymwt-control{
                                 border: none;
                                 background-color: $first-color;
+                                & .css-1fdsijx-ValueContainer{
+                                    padding: nth($padding, 1)-3 0;
+                                }
                             }
                             & .css-t3ipsp-control:hover, .css-t3ipsp-control{
                                 border: none;
@@ -126,6 +129,7 @@
                         text-transform: uppercase;
                         border-bottom: solid 2px $black-color;
                         cursor: pointer;
+                        padding: nth($padding, 1) 0;
                     }
                 }
             }
@@ -190,7 +194,9 @@
                 @include tablet{
                     width: 50%;
                 }
-            & .footer_elements-first, & .footer_elements-second, & .footer_elements-third{
+            & .footer_elements-first,
+            & .footer_elements-second,
+            & .footer_elements-third{
                 height: 100%;
                 h3{
                     padding: 0 0 nth($padding, 4) 0
