@@ -7,9 +7,14 @@ footer{
             font-family: 'Gotham Light';
         }
         h1{
-            font-size: 25px;
             font-family: 'Gotham Bold';
             letter-spacing: 1px;
+            @include mobile{
+                font-size: 20px;
+            }
+            @include tablet{
+                font-size: 25px;
+            }
 
         }
         h2, .text-more_break{

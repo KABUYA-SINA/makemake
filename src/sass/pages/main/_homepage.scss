@@ -6,11 +6,14 @@
     & .exception-homepage{
         display: flex;
         align-items: center;
-        justify-content: center;
         flex-direction: column;
-        margin: nth($margin, 4)*5 0;
+        @include mobile{
+            margin: nth($margin, 4)*5 0 nth($margin, 4)*2.5 0
+        }
+        @include tablet{
+            margin: nth($margin, 4)*10 0 nth($margin, 4)*6 0;
+        }
         & .exception-element{
-            line-height: 55px;
             letter-spacing: 1px;
             & .exception-img{
                 background: center / contain no-repeat url('../../../images/circle.webp');
@@ -20,44 +23,122 @@
     }
     & .first-element__homepage {
         display: flex;
+            @include mobile{
+                flex-direction: column;
+            }
+            @include tablet{
+                flex-direction: row;
+                position: relative;
+                z-index: 4;
+            }
         & .first-element__image{
-            width: 55%;
-            text-align: right;
+            @include mobile{
+                width: 100%;
+                text-align: center;
+            }
+            @include tablet{
+                width: 55%;
+                text-align: right;
+            }
             & img{
                 object-fit: cover;
-                width: 60%;
-                height: 100%;
-                margin-right: nth($margin, 4)*4;
+                @include mobile{
+                    margin: 0;
+                    width: 80%;
+                }
+                @include tablet{
+                    width: 77%;
+                    height: 100%;
+                    margin-right: nth($margin, 4)*2.5;
+                }
+                @include ordi{
+                    width: 70%;
+                    margin-right: nth($margin, 4)*4;
+                }
+                @include largeOrdi{
+                    width: 45%;
+                }
             }
         }
         & .first-element__text{
             display: flex;
             flex-direction: column;
-            gap: 50px;
-            width: 45%;
+            @include mobile{
+                width: 100%;
+                align-items: center;
+                padding: nth($padding, 2)*3 0 nth($padding, 4)*3.5 0; 
+            }
+            @include tablet{
+                align-items: flex-start;
+                gap: 10px;
+                width: 45%;
+            }
+            @include ordi{
+                gap: 35px;
+            }
+            @include xlargeOrdi{
+                gap: 50px;
+            }
             h2 {
                 text-transform: uppercase;
                 letter-spacing: 1px;
+                @include mobile{
+                    width: 80%;
+                }
+                @include tablet{
+                    width: 100%;
+                }
             }
             & .more-text--homepage{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                width: 70%; //60
+                @include mobile{
+                    width: 80%;
+                    margin-top: nth($margin, 4);
+                }
+                @include tablet{
+                    margin-top: 0;
+                }
+                @include ordi{
+                    width: 70%;
+                }
+                @include xlargeOrdi{
+                    width: 50%;
+                }
             }
             & .last-child__first-element{
                 text-transform: uppercase;
+                @include mobile{
+                    width: 80%;
+                    margin-top: nth($margin, 4)+10;
+                }
+                @include tablet{
+                    width: 100%;
+                }
                 a{
                     color: $black-color;
                     padding: nth($padding, 2) 0;
-                    border-bottom: solid 1px;
+                    border-bottom: solid 2px;
                 }
             }
         }
     }
     & .second-element__homepage{
         background: $background-element;
-        padding: nth($padding, 4)*10 0;
+        position: relative;
+        z-index: 2;
+        @include mobile{
+            top: 0;
+            padding: nth($padding, 4)*5 0;
+        }
+        @include tablet{
+            padding: nth($padding, 4)*10 0;
+            top: -25px;
+        }
+        @include ordi{
+            top: -65px;
+        }
         & .second-element__homepage--images{
             display: flex;
             flex-direction: row;
@@ -116,12 +197,12 @@
             a {
                 color: $black-color;
                 padding: nth($padding, 2) 0;
-                border-bottom: solid 1px;
+                border-bottom: solid 2px;
             }
         }
     }
     & .third-element__homepage{
-        padding: nth($padding, 4)*5 0;
+        padding: nth($padding, 4)+15 0 nth($padding, 4)*5 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -146,7 +227,7 @@
             a {
                 color: $black-color;
                 padding: nth($padding, 2) 0;
-                border-bottom: solid 1px;
+                border-bottom: solid 2px;
             }
         }
     }

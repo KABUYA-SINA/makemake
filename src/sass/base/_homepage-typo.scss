@@ -5,8 +5,19 @@
     & .exception-homepage{
         font-family: 'Blaak Thin';
         & .exception-element {
-            font-size: 50px;
             font-weight: 400;
+            @include mobile{
+                font-size: 20px;
+                line-height: 25px;
+            }
+            @include tablet{
+                font-size: 35px;
+                line-height: 35px;
+            }
+            @include ordi{
+                font-size: 50px;
+                line-height: 55px;
+            }
         }
     }
     & .first-element__homepage{
@@ -15,6 +26,21 @@
             h2 {
                 font-family: 'NiteClub Normal';
                 font-weight: 400;
+                font-size: 23px;
+            }
+            & .more-text--homepage{
+                & .more-text-span{
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+            & .last-child__first-element{
+                a{
+                    font-size: 16px;
+                }
             }
         }
 
@@ -27,21 +53,37 @@
                     & .second-element__all--text{
                         & p{
                             font-weight: 700;
+                            font-size: 16px;
                         }
                     }
                 }
                 & .second-element__title {
                     font-weight: 700;
+                    @include mobile{
+                        font-size: 12px;
+                    }
+                    @include tablet{
+                        font-size: 16px;
+                    }
                 }
             }
         }
-        
+        & .last-child__section-two{
+            a{
+                font-size: 16px;
+                font-family: Gotham Light;
+            }
+        }
     }
     & .third-element__homepage{
         h2{
             font-family: 'NiteClub Normal';
             font-weight: 400;
             letter-spacing: 1px;
+        }
+        & .last-child__section-three{
+            font-size: 16px;
+            font-family: Gotham Light;
         }
     }
 }
