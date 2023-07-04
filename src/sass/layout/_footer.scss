@@ -9,8 +9,13 @@
     flex-direction: column;
     background: $first-color;
     h1{
-        padding: nth($padding, 4)*10 0 nth($padding, 4)*7 0;
         text-transform: uppercase;
+        @include mobile{
+            padding: nth($padding, 4)*5 0 ;
+        }
+        @include tablet{
+            padding: nth($padding, 4)*10 0 nth($padding, 4)*7 0;
+        }
     }
     & .footer_fom{
         display: flex;
@@ -18,9 +23,11 @@
         padding-bottom: nth($padding , 4)*6;
             @include mobile{
                 flex-direction: column;
+                gap: 50px;
             }
             @include tablet {
                 flex-direction: row;
+                gap: 0;
             }
         & .footer-img{
                 @include mobile{
@@ -50,15 +57,32 @@
                         width: 80%;
                     }
                     @include tablet{
+                        width: 65%;
+                    }
+                    @include ordi {
                         width: 60%;
                     }
                 & .first-for__form{
                     display: flex;
-                    gap: 50px;
+                    @include mobile{
+                        flex-direction: column;
+                    }
+                    @include tablet{
+                        flex-direction: row;
+                        gap: 20px;
+                    }
+                    @include ordi{
+                        gap: 40px;
+                    }
                     & .form-group{
-                        width: 50%;
                         border-bottom: solid 2px $footer-text-underline;
                         padding: nth($padding, 2) 0;
+                        @include mobile{
+                            width: 100%;
+                        }
+                        @include tablet{
+                            width: 50%;
+                        }
                     }
                 }
                 & .second-for__form{

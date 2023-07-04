@@ -1,0 +1,35 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.main-studiopage {
+    & .first-element__studiopage {
+        & .first-element__text--studio {
+            font-family: 'Gotham Light';
+            h2 {
+                font-family: 'NiteClub Normal';
+                font-weight: 400;
+                font-size: 23px;
+            }
+            & .more-text--studiopage {
+                & .more-text-span--studio {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+}
