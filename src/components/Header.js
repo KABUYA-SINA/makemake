@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import Logo from '../images/header.webp'
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
+import {Link} from 'react-scroll'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {BsXLg} from 'react-icons/bs'
 import '../sass/layout/_header.scss'
 
 export const Header = () => {
     const [burger, setBurger] = useState(false)
+     const [isClass, setClass] = useState(false);
 
     function handleBurger(){
         setBurger(!burger)
@@ -17,38 +19,47 @@ export const Header = () => {
        header.classList.toggle('sticky', window.scrollY > 0)
     })
 
+    const toggle =() => {
+       setClass( prevState => !prevState)
+    }
+
+    function refreshPage() {
+        window.location.reload(true);
+    }
+
+
     return (
         <header >
             <div className='header-container'>
-                <div className="header-logo">
-                    <Link to='/'>
+                <div className="header-logo" onClick={refreshPage}>
+                    <NavLink to='/'>
                         <img src={Logo} alt="logo agence" />
-                    </Link>
+                    </NavLink>
                 </div>
                 <nav>
                     <ul className={ burger ? 'header-nav__ul active ' : ' header-nav__ul'}>
                         <div className="burger-next" onClick={handleBurger}>
                             {burger ? <BsXLg size={30}/> : '' }
                         </div>
-                        <li>
-                            <NavLink href='../pages/Studio.js' to="/studio" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
+                        <li onClick={refreshPage}>
+                            <NavLink href='../pages/Studio.js' to="/studio" className={(nav)  => (nav.isActive ? 'nav-active' : '')} >
                                 Studio
                             </NavLink>
                         </li>
-                        <li>
+                        <li onClick={refreshPage}>
                             <NavLink href='../pages/Realisation.js' to="/realisation" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
                                 Réalisations
                             </NavLink>
                         </li>
-                        <li>
+                        <li onClick={refreshPage}>
                             <NavLink href='../pages/Expertises' to="/expertises" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
                                 Expertises
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink href='#' to="/" className={(nav)  => (nav.isActive ? 'nav-active' : '')}>
+                            <Link to="contact" spy={true} smooth={true} offset={-40} duration={500} className={ isClass ? "nav-active" : ""} onClick={toggle}>
                                 Contact
-                            </NavLink>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

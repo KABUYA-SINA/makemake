@@ -53,7 +53,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer>
+    <footer id='contact'>
       <div className='footer-container'>
           <h1>parlons de votre projet ?</h1>
           <div className="footer_fom">
