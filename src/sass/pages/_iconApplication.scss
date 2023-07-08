@@ -11,7 +11,8 @@
             justify-content: space-between;
         }
     & a{
-        color: $black-color
+        color: $black-color;
+        display: flex;
     }
     & svg{
         @include mobile{

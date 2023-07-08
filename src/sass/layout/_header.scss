@@ -95,6 +95,18 @@
                     text-transform: uppercase;
                 }
             }
+            & .exception-react{
+                margin-top: nth($margin, 4)*5;
+                @include mobile{
+                    width: 60%;
+                }
+                @include tablet{
+                    width: 20%;
+                }
+                @include ordiBurger{
+                    display: none;
+                }
+            }
         }
     }
 

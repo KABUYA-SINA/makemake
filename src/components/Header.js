@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
-import Logo from '../images/header.webp'
-import {  NavLink } from 'react-router-dom';
-import {Link} from 'react-scroll'
-import {RxHamburgerMenu} from 'react-icons/rx'
-import {BsXLg} from 'react-icons/bs'
-import '../sass/layout/_header.scss'
+import React, { useState } from 'react';
+import IconsApplication from './IconsApplication';
+import Logo from '../images/header.webp';
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { BsXLg } from 'react-icons/bs';
+import '../sass/layout/_header.scss';
 
 export const Header = () => {
     const [burger, setBurger] = useState(false)
@@ -61,6 +62,9 @@ export const Header = () => {
                                 Contact
                             </Link>
                         </li>
+                        <div className='exception-react'>
+                            <IconsApplication />
+                        </div>
                     </ul>
                 </nav>
                 <div className="hamburger" onClick={handleBurger}>

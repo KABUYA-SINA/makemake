@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import FooterImg from '../images/footer_img.webp'
-import FormInput from './FormInputs'
-import TextArea from './TextArea'
-import '../sass/base/_footer.scss'
-import '../sass/layout/_footer.scss'
-import Selected from './Selected'
-import IconsApplication from './IconsApplication'
+import React, { useState } from 'react';
+import FooterImg from '../images/footer_img.webp';
+import FormInput from './FormInputs';
+import TextArea from './TextArea';
+import Selected from './Selected';
+import IconsApplication from './IconsApplication';
+import '../sass/base/_footer.scss';
+import '../sass/layout/_footer.scss';
+
 
 export const Footer = () => {
   const [textareaValues, setTextAreaValues] = useState('')

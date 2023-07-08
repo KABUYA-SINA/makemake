@@ -4,8 +4,19 @@
 @import "./base/_base";
 @import "./base/_header";
 @import "./base/_footer";
+@import "./base/homepage-typo";
+@import "./base/studiopage-typo";
 
 
 @import "./layout/_header";
 @import "./layout/_container";
 @import "./layout/_footer";
+
+
+@import "./pages/inputs/form";
+@import "./pages/main/homepage";
+@import "./pages/main/studiopage";
+@import "./pages/error";
+@import "./pages/iconApplication";
+@import "./pages/arrows/arrows";
+@import "./pages/arrows/fullarrows";

@@ -10,6 +10,8 @@
     }
     & .first-element__studiopage{
         display: flex;
+        position: relative;
+        z-index: 4;
         @include mobile {
             flex-direction: column;
         }
@@ -96,6 +98,46 @@
                 }
 
             }
+        }
+    }
+    & .second-element__studiopage{
+        background: $background-element;
+        padding: nth($padding, 4)*10 0;
+        position: relative;
+        z-index: 2;
+        @include mobile {
+            top: 0;
+            padding: nth($padding, 4)*5 0;
+        }
+        @include tablet {
+            padding: nth($padding, 4)*10 0;
+            top: -25px;
+        }
+        @include ordi {
+            top: -65px;
+        }
+        & .second-element--btn{
+            background: $black-color;
+            color: $white-color;
+            border-radius: 50%;
+            height: 100px;
+            width: 300px;
+            transform: rotateZ(10deg) scale(1);
+            transition: all .3s;
+            cursor: pointer;
+            position: absolute;
+            top: -5%;
+            right: 10%;
+            & .btn-line{
+                border-bottom: solid 2px $white-color;
+                padding: nth($padding, 1)+2 0;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+        & .second-element--btn:hover{
+            transform: rotateZ(0deg) scale(1.1);
+            transition: all .3s ease-in-out;
         }
     }
 

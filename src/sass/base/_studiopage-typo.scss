@@ -22,7 +22,19 @@
         }
 
     }
-
+    & .second-element__studiopage{
+        & .second-element--btn {
+            font-size: 13px;
+        }
+        & .second-element--arrow{
+            h2{
+                font-family: 'NiteClub Normal';
+                font-weight: 400;
+                font-size: 40px;
+            }
+        }
+    }
+    
 
 
 

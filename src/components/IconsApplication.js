@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {BsFacebook} from 'react-icons/bs'
-import {ImLinkedin} from 'react-icons/im'
-import {BsInstagram} from 'react-icons/bs'
+import { BsFacebook } from 'react-icons/bs'
+import { ImLinkedin } from 'react-icons/im'
+import { BsInstagram } from 'react-icons/bs'
 import '../sass/pages/_iconApplication.scss'
 
 const IconsApplication = () => {

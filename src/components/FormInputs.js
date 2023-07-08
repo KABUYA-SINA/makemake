@@ -9,13 +9,12 @@ export const FormInputs = (props) => {
     }
   return (
     <div className='form-group'>
-      {/* <label htmlFor={props.label}>{label}</label> */}
-        <input
-          {...inputProps} onChange={onChange}
-          onBlur={handleFocus}
-          focused={focused.toString()}
-        />
-        <span className='alert'>{errorMessage}</span>
+      <input
+        {...inputProps} onChange={onChange}
+        onBlur={handleFocus}
+        focused={focused.toString()}
+      />
+      <span className='alert'>{errorMessage}</span>
     </div>
   )
 }
