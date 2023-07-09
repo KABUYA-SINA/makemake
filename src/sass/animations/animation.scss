@@ -1,0 +1,8 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+@keyframes circle {
+    to {
+        stroke-dashoffset: 1;
+    }
+}

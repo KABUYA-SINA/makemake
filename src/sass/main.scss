@@ -1,6 +1,8 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
+@import "./animations/animation.scss";
+
 @import "./base/_base";
 @import "./base/_header";
 @import "./base/_footer";

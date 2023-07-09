@@ -6,7 +6,19 @@ const Arrows = () => {
         <div className="full-arows">
             <div className="arrow"></div>
             <div className="angle-arrow"></div>
-            <div className="arrow-circle"></div>
+            <div className="arrow-circle">
+                <svg>
+                    <circle
+                        cx={'35px'}
+                        cy={'40px'}
+                        r={'20px'}
+                        stroke={'#333'}
+                        strokeWidth={1}
+                        fill={'transparent'}
+                    >
+                    </circle>
+                </svg>
+            </div>
         </div>
     )
 }

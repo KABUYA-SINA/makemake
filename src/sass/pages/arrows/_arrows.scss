@@ -1,0 +1,41 @@
+@import '../../utils/mixins';
+@import '../../utils/variables';
+
+
+.full-arows {
+    @include mobile{
+        display: none;
+    }
+    @include tablet{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    & .arrow {
+        width: 80px;
+        height: 1px;
+        background: $black-color;
+    }
+    & .angle-arrow {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 12px solid $black-color;
+    }
+    & .arrow-circle {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        position: absolute;
+        margin-left: nth($margin, 4)*2+5 ;
+        svg{
+            height: 75px;
+            width: 75px;
+            transform: rotate(-180deg);
+            circle {
+                stroke-dasharray: 188;
+                stroke-dashoffset: 188;
+            }
+        }
+    }
+}
+

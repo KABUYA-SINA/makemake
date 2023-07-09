@@ -1,6 +1,7 @@
 import React from 'react';
 import FirstImageStudio from '../../images/studio_img.webp';
 import FullArrows from '../arrows/FullArrows';
+import SecondImageStudio from '../../images/studio_img_two.webp';
 import '../../sass/pages/main/_studiopage.scss';
 import '../../sass/base/_studiopage-typo.scss'
 
@@ -31,7 +32,12 @@ const Studiopage = () => {
           <FullArrows title={'Web design & réseaux sociaux'} />
           <FullArrows title={'Graphisme d’espace'} />
         </section>
-        <section className="third-element__studiopage"></section>
+        <section className="third-element__studiopage">
+          <h2>Leitmotiv</h2>
+          <div className="third-element__studiopage--images">
+            <img src={SecondImageStudio} alt='Vue sur la lune' />
+          </div>
+        </section>
         <section className="fourth-element__studiopage"></section>
         <section className="fith-element__studiopage"></section>
 

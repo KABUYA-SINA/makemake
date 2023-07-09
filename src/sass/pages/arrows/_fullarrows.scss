@@ -1,0 +1,40 @@
+@import '../../utils/mixins';
+@import '../../utils/variables';
+@import '../../animations/animation.scss';
+
+.second-element--arrow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 2px ;
+    cursor: pointer;
+    @include mobile{
+        width: 80%;
+        padding: nth($padding, 4) 0;
+    }
+    @include tablet{
+        padding: nth($padding, 4) nth($padding, 2) nth($padding, 4) 0;
+    }
+    @include largeOrdi{
+        width: 65%;
+    }
+    h2{
+        text-transform: uppercase;
+        @include mobile{
+            width: 100%;
+            text-align: center;
+        }
+        @include tablet{
+            width: 50%;
+            text-align: left;
+        }
+    }
+}
+.second-element--arrow:hover,
+.second-element--arrow:focus{
+    & .full-arows{
+        & .arrow-circle svg circle{
+            animation: circle 1.5s forwards;
+        }
+    }
+}
