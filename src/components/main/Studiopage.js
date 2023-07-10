@@ -1,7 +1,10 @@
 import React from 'react';
+import Collapse from '../Collapse';
+import Vector from '../../images/collapse_img.webp';
 import FirstImageStudio from '../../images/studio_img.webp';
 import FullArrows from '../arrows/FullArrows';
 import SecondImageStudio from '../../images/studio_img_two.webp';
+import ThirdImageStudio from '../../images/gif/studio_third_img.gif';
 import '../../sass/pages/main/_studiopage.scss';
 import '../../sass/base/_studiopage-typo.scss'
 
@@ -38,7 +41,23 @@ const Studiopage = () => {
             <img src={SecondImageStudio} alt='Vue sur la lune' />
           </div>
         </section>
-        <section className="fourth-element__studiopage"></section>
+        <section className="fourth-element__studiopage">
+          <div className="fourth-element__studiopage--first">
+            <h2>méthodo</h2>
+            <p>Notre équipe met en place une méthodologie de travail fondée sur l’échange et l’inspiration collective entre tous les acteurs du projet.</p>
+            <div className="fourth-element__studiopage--third">
+              <div className="fourth-element__studiopage--third--img">
+                  <img src={ThirdImageStudio} alt="gif de l'agence" />
+              </div>
+              <div className="fourth-element--collapse">
+                <Collapse collapseImage={Vector} title={'Se rencontrer'} text={'Identification de vos besoins, vos attentes et/ou problématiques de communication — Apprenons à nous connaître et échangeons sur votre projet afin de construire une collaboration fondée sur la confiance et la transparence. Nous investiguons votre univers, valeur ajoutée et territoire d’expertise pour imaginer et construire un univers graphique qui vous ressemble.'}/>
+                <Collapse title={'Collaborer'} text={'Proposition d’une stratégie de communication clairement identifiée – Nous formulons une réponse claire et pertinente afin de répondre à vos besoins, tout en veillant au respect de votre budget.'}/>
+                <Collapse title={'Créer'} text={'Élaboration d’une communication globale et cohérente — Notre studio met en place un vocabulaire graphique unique et sensé. Nous faisons vivre vos messages grâce à des éléments graphiques qui composent votre univers et que nous aurons imaginés et validés ensemble. '}/>
+                <Collapse title={'Exister'} text={'Un accompagnement durable pour l’appropriation de votre communication – Et après ? Notre équipe aux profils stratégiques, créatifs et opérationnels s’engage à vous donner les meilleurs conseils afin que vous puissiez vous approprier votre image de marque et vos nouveaux supports de communication.'}/>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="fith-element__studiopage"></section>
 
     </main>
