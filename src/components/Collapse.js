@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Vector from '../images/collapse_img.webp';
 import styled from "styled-components/";
 import '../sass/pages/_collapse.scss';
+import '../sass/base/_collapse-typo.scss';
 
 const Collapse = ({title, text}) => {
     const [rotate, setRotate] = useState(true)
@@ -24,10 +25,10 @@ const Collapse = ({title, text}) => {
 }
 
 const IconImageWrapper = styled.img`
-transform: rotate(180deg);
+transform: rotate(0deg);
 overflow: hidden;
 transition: all 0.3s ease-out;
-${({ rotate }) => rotate && `transform: rotate(0deg)`};
+${({ rotate }) => rotate && `transform: rotate(180deg)`};
 `
 
 export default Collapse;

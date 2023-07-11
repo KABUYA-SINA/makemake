@@ -37,16 +37,13 @@
                     height: 100%;
                     margin-right: nth($margin, 4)*2.5;
                 }
-
                 @include ordi {
                     width: 70%;
                     margin-right: nth($margin, 4)*4;
                 }
-
                 @include largeOrdi {
                     width: 45%;
                 }
-
             }
         }
         & .first-element__text--studio{
@@ -96,7 +93,6 @@
                 @include xlargeOrdi {
                     width: 50%;
                 }
-
             }
         }
     }
@@ -179,13 +175,34 @@
             }
             p{
                 text-align: center;
+                letter-spacing: 1px;
+                @include mobile{
+                    width: 70%;
+                }
+                @include tablet{
+                    width: 50%;
+                }
             }
             & .fourth-element__studiopage--third {
                 display: flex;
                 align-items: center;
-                gap: 30px;
+                gap: 70px;
+                @include mobile{
+                    flex-direction: column;
+                    width: 100%;
+                }
+                @include tablet{
+                    flex-direction: row;
+                    width: 70%;
+                }
                 & .fourth-element__studiopage--third--img {
-                    width: 50%;
+                    height: 100%;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    @include tablet{
+                        width: 50%;
+                    }
                     img {
                         object-fit: cover;
                         width: 100%;
@@ -193,7 +210,13 @@
                     }
                 }
                 & .fourth-element--collapse {
-                    width: 50%;
+                    height: 100%;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    @include tablet{
+                        width: 50%;
+                    }
                     & .collapse {
                         cursor: pointer;
                     }

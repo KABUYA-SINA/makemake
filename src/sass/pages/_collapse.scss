@@ -2,23 +2,24 @@
 @import '../utils/mixins';
 
 .collapse{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     border-top: solid 1px;
-    border-bottom: solid 1px;
     padding: nth($padding, 3) nth($padding, 2);
     section{
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-
         h3 {
-
+            text-transform: uppercase;
         }
-
         img {
             object-fit: cover;
             height: 100%;
         }
     }
-
+    &:nth-last-child(-n+1){
+        border-bottom: solid 1px;
+    }
 }

@@ -1,0 +1,15 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.collapse {
+    section{
+        h3{
+            font-family: Gotham Bold;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        & .boxes-childs{
+            font-size: 13px;
+        }
+    }
+}
