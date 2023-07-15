@@ -5,6 +5,7 @@ import FirstImageStudio from '../../images/studio_img.webp';
 import FullArrows from '../arrows/FullArrows';
 import SecondImageStudio from '../../images/studio_img_two.webp';
 import ThirdImageStudio from '../../images/gif/studio_third_img.gif';
+import DragAndDrop from '../DragAndDrop';
 import '../../sass/pages/main/_studiopage.scss';
 import '../../sass/base/_studiopage-typo.scss'
 
@@ -58,7 +59,10 @@ const Studiopage = () => {
             </div>
           </div>
         </section>
-        <section className="fith-element__studiopage"></section>
+        <section className="fith-element__studiopage">
+          <h2>Atelier de curiosité</h2>
+          <DragAndDrop />
+        </section>
 
     </main>
   )
