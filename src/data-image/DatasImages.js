@@ -12,47 +12,56 @@ const DatasImages = [
   {
     id: 1,
     image: FirstImagesDrag,
-    alt: 'lion sur une chaise'
+    alt: 'lion sur une chaise',
+    class: "first-image--drop"
   },
   {
     id: 2,
     image: SecondImagesDrag,
-    alt: 'des signes'
+    alt: 'des signes',
+    class: "second-image--drop"
   },
   {
     id: 3,
     image: ThirdImagesDrag,
-    alt: 'un homme assis'
+    alt: 'un homme assis',
+    class: "third-image--drop"
   },
   {
     id: 4,
     image: FourthImagesDrag,
-    alt: 'des tags'
+    alt: 'des tags',
+    class: "fourth-image--drop"
   },
   {
     id: 5,
     image: FifthImagesDrag,
-    alt: 'une dimension'
+    alt: 'une dimension',
+    class: "fifth-image--drop"
   },
   {
     id: 6,
     image: SixthImagesDrag,
-    alt: 'avion'
+    alt: 'avion',
+    class: "sixth-image--drop"
   },
   {
     id: 7,
     image: SeventhImagesDrag,
-    alt: 'pan'
+    alt: 'pan',
+    class: "seventh-image--drop"
   },
   {
     id: 8,
     image: EighthImagesDrag,
-    alt: 'un homme sur un cheval'
+    alt: 'un homme sur un cheval',
+    class: "eighth-image--drop"
   },
   {
     id: 9,
     image: NinthImagesDrag,
-    alt: 'un couple'
+    alt: 'un couple',
+    class: "ninth-image--drop"
   }
 ]
 

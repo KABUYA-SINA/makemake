@@ -1,0 +1,69 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.drag-and--drop{
+    width: 100%;
+    @include mobile{
+        height: 465px;
+    }
+    @include ordi{
+        height: 800px;
+    }
+    @include largeOrdi {
+        height: 900px;
+    }
+    article{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        img {
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            cursor: grab;
+            @include mobile {
+                width: 30%;
+            }
+            @include tablet {
+                width: 10%;
+            }
+        }
+        & .first-image--drop {
+            left: 45%;
+            top: 10%;
+        }
+        & .second-image--drop {
+            left: 35%;
+            top: 4%;
+        }
+        & .third-image--drop {
+            left: 30%; //25
+            top: 30%
+        }
+        & .fourth-image--drop {
+            left: 20%;
+            top: 40%;
+        }
+        & .fifth-image--drop {
+            left: 31%;
+            top: 10%; //40
+        }
+        & .sixth-image--drop {
+            left: 22%;
+            top: 8%;
+        }
+        & .seventh-image--drop {
+            left: 43%;
+            top: 8%;
+        }
+        & .eighth-image--drop {
+            left: 29%;
+            top: 15%; //33
+        }
+        & .ninth-image--drop {
+            left: 36%;
+            top: 50%;
+        }
+    }
+}
