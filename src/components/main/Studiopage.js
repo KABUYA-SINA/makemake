@@ -6,10 +6,13 @@ import FullArrows from '../arrows/FullArrows';
 import SecondImageStudio from '../../images/studio_img_two.webp';
 import ThirdImageStudio from '../../images/gif/studio_third_img.gif';
 import DragAndDrop from '../DragAndDrop';
+import ErrorData from '../../pages/ErrorData';
+import { ErrorBoundary } from 'react-error-boundary';
 import '../../sass/pages/main/_studiopage.scss';
-import '../../sass/base/_studiopage-typo.scss'
+import '../../sass/base/_studiopage-typo.scss';
 
 const Studiopage = () => {
+
   return (
     <main className='main-studiopage'>
         <section className="first-element__studiopage">
@@ -61,7 +64,9 @@ const Studiopage = () => {
         </section>
         <section className="fith-element__studiopage">
           <h2>Atelier de curiosité</h2>
-          <DragAndDrop />
+          <ErrorBoundary FallbackComponent={ErrorData} onReset={() => {}}>
+            <DragAndDrop />
+          </ErrorBoundary>
         </section>
 
     </main>

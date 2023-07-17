@@ -193,6 +193,11 @@
                 }
                 @include tablet{
                     flex-direction: row;
+                }
+                @include ordi{
+                    width: 90%;
+                }
+                @include xlargeOrdi{
                     width: 70%;
                 }
                 & .fourth-element__studiopage--third--img {
@@ -234,13 +239,4 @@
             text-transform: uppercase;
         }
     }
-
-
-
-
-
-
-
-
-
 }

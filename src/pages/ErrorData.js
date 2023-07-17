@@ -1,39 +1,38 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { useNavigate, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import '../sass/pages/_error.scss';
 
-
-function Error () {
-
+function ErrorData  () {
     const navigate = useNavigate()
 
     const handleClick = () => {
-        navigate('/', {replace: true});
-    }
-
+        navigate('/')
+   }
     return (
-        <div className='top-parent'>
+         <motion.div
+            className='top-parent'
+            initial={{width: 0}}
+            animate={{width: '100%'}}
+            exit={{x: window.innerWidth, transition:{ duration: 0.3}}}
+            >
             <div className='content'>
-                <Header />
                 <main>
                     <div className='main-error'>
                         <div className='main-error__pages'>
-                            <h1>404</h1>
+                            <h1>500</h1>
                             <p>
-                                Oups! This is not the web page you are lookinf for.
+                                Something went wrong with the server.
                             </p>
                             <Link to='/' onClick={handleClick}>
                                 <span className='btn-error'> Please return to Home page</span>
                             </Link>
-                        </div>
+                    </div>
                     </div>
                 </main>
             </div>
-            <Footer />
-        </div>
+        </motion.div>
     );
 };
 
-export default Error;
+export default ErrorData;
