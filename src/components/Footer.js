@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FooterImg from '../images/footer_img.webp';
+import FooterImg from '../images/footer/footer_img.webp';
 import FormInput from './FormInputs';
 import TextArea from './TextArea';
 import Selected from './Selected';

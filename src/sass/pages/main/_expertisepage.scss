@@ -1,0 +1,104 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+
+.main-expertisepage{
+    @include mobile {
+        margin-top: nth($margin, 4)*7;
+    }
+    @include xlargeOrdi {
+        margin-top: nth($margin, 4)*10;
+    }
+    & .first-element__expertisepage {
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+        }
+        @include tablet {
+            flex-direction: row;
+        }
+        & .first-element__image--expertise {
+            @include mobile {
+                width: 100%;
+                text-align: center;
+            }
+            @include tablet {
+                width: 55%;
+                text-align: right;
+            }
+            img {
+                object-fit: cover;
+                @include mobile {
+                    width: 80%;
+                    height: 100%;
+                }
+                @include tablet {
+                    width: 77%;
+                    // height: 100%;
+                    margin-right: nth($margin, 4)*2.5;
+                }
+                @include ordi {
+                    width: 70%;
+                    margin-right: nth($margin, 4)*4;
+                }
+                @include largeOrdi {
+                    width: 60%; //45
+                }
+            }
+        }
+    }
+    & .first-element__text--expertise {
+        display: flex;
+        flex-direction: column;
+        @include mobile {
+            width: 100%;
+            align-items: center;
+            padding: nth($padding, 2)*3 0 nth($padding, 4)*3.5 0;
+        }
+        @include tablet {
+            align-items: flex-start;
+            gap: 10px;
+            width: 45%;
+        }
+        @include ordi {
+            gap: 35px;
+        }
+        @include xlargeOrdi {
+            gap: 50px;
+        }
+        & .title-epxertise{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            line-height: 31px;
+            @include mobile {
+                width: 80%;
+            }
+            @include tablet {
+                width: 100%;
+            }
+            & .title-expertise__span{
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+        & .more-text--expertisepage {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            @include mobile {
+                width: 80%;
+                margin-top: nth($margin, 4);
+            }
+            @include tablet {
+                margin-top: 0;
+            }
+            @include ordi {
+                width: 70%;
+            }
+            @include xlargeOrdi {
+                width: 50%;
+            }
+        }
+    }
+}

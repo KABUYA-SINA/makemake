@@ -2,7 +2,6 @@
 @import '../../utils/mixins';
 
 .main-homepage{
-
     & .exception-homepage{
         display: flex;
         align-items: center;
@@ -18,7 +17,7 @@
             width: 80%;
             text-align: center;
             & .exception-img{
-                background: center / contain no-repeat url('../../../images/circle.webp');
+                background: center / contain no-repeat url('../../../images/home/circle.webp');
                 padding: nth($padding, 4)+8.8 0;
             }
         }
@@ -46,10 +45,10 @@
                 object-fit: cover;
                 @include mobile{
                     width: 80%;
+                    height: 100%;
                 }
                 @include tablet{
                     width: 77%;
-                    height: 100%;
                     margin-right: nth($margin, 4)*2.5;
                 }
                 @include ordi{

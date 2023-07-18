@@ -1,0 +1,37 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.main-expertisepage{
+    & .first-element__expertisepage{
+        & .first-element__text--expertise{
+            font-family: 'Gotham Light';
+            & .title-epxertise {
+                font-family: 'NiteClub Normal';
+                & .title-expertise__span {
+                    font-weight: 400;
+                    font-size: 30px;
+                }
+            }
+            & .more-text--expertisepage{
+                & .more-text-span--expertise {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FirstImage from '../../images/first_img_homepage.webp';
-import SecondImage from '../../images/home_one.webp';
-import ThridImage from '../../images/home_two.webp';
-import FourthImage from '../../images/home_three.webp';
-import FithImage from '../../images/home_four.webp';
-import SixthImage from '../../images/home_five.webp';
-import SevenImage from '../../images/home_six.webp';
+import FirstImage from '../../images/home/first_img_homepage.webp';
+import SecondImage from '../../images/home/home_one.webp';
+import ThridImage from '../../images/home/home_two.webp';
+import FourthImage from '../../images/home/home_three.webp';
+import FithImage from '../../images/home/home_four.webp';
+import SixthImage from '../../images/home/home_five.webp';
+import SevenImage from '../../images/home/home_six.webp';
 import '../../sass/pages/main/_homepage.scss';
 import '../../sass/base/_homepage-typo.scss';
 

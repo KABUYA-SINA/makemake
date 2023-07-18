@@ -31,10 +31,10 @@
                 object-fit: cover;
                 @include mobile {
                     width: 80%;
+                    height: 100%;
                 }
                 @include tablet {
                     width: 77%;
-                    height: 100%;
                     margin-right: nth($margin, 4)*2.5;
                 }
                 @include ordi {

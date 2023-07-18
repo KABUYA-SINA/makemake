@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Vector from '../images/collapse_img.webp';
+import Vector from '../images/studio/collapse_img.webp';
 import styled from "styled-components/";
 import '../sass/pages/_collapse.scss';
 import '../sass/base/_collapse-typo.scss';
