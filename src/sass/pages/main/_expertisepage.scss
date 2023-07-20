@@ -16,15 +16,17 @@
         }
         @include tablet {
             flex-direction: row;
+            padding-bottom: nth($padding, 4)*10;
         }
         & .first-element__image--expertise {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             @include mobile {
                 width: 100%;
-                text-align: center;
             }
             @include tablet {
                 width: 55%;
-                text-align: right;
             }
             img {
                 object-fit: cover;
@@ -34,71 +36,274 @@
                 }
                 @include tablet {
                     width: 77%;
-                    // height: 100%;
-                    margin-right: nth($margin, 4)*2.5;
+                    height: 70%;
                 }
                 @include ordi {
                     width: 70%;
-                    margin-right: nth($margin, 4)*4;
+                    height: 85%;
                 }
                 @include largeOrdi {
-                    width: 60%; //45
+                    width: 60%;
+                    height: 100%;
+                }
+            }
+        }
+        & .first-element__text--expertise {
+            display: flex;
+            flex-direction: column;
+            @include mobile {
+                width: 100%;
+                align-items: center;
+                padding: nth($padding, 2)*3 0 nth($padding, 4)*3.5 0;
+            }
+            @include tablet {
+                align-items: flex-start;
+                gap: 10px;
+                width: 45%;
+            }
+            @include ordi {
+                gap: 35px;
+            }
+            @include xlargeOrdi {
+                gap: 50px;
+            }
+            & .title-epxertise {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                line-height: 31px;
+                @include mobile {
+                    width: 80%;
+                }
+                @include tablet {
+                    width: 100%;
+                }
+                & .title-expertise__span {
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+            & .more-text--expertisepage {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include mobile {
+                    width: 80%;
+                    margin-top: nth($margin, 4);
+                }
+                @include tablet {
+                    margin-top: 0;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include xlargeOrdi {
+                    width: 50%;
                 }
             }
         }
     }
-    & .first-element__text--expertise {
+    & .second-element__expertisepage{
         display: flex;
-        flex-direction: column;
+        background: $background-element;
         @include mobile {
-            width: 100%;
-            align-items: center;
-            padding: nth($padding, 2)*3 0 nth($padding, 4)*3.5 0;
+            flex-direction: column;
+            padding-top: nth($padding, 4)*5;
         }
         @include tablet {
-            align-items: flex-start;
-            gap: 10px;
-            width: 45%;
+            flex-direction: row-reverse;
+            padding: nth($padding, 4)*10 0;
         }
-        @include ordi {
-            gap: 35px;
-        }
-        @include xlargeOrdi {
-            gap: 50px;
-        }
-        & .title-epxertise{
+        & .second-element__image--expertise{
             display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            line-height: 31px;
+            align-items: center;
+            justify-content: center;
             @include mobile {
-                width: 80%;
-            }
-            @include tablet {
                 width: 100%;
             }
-            & .title-expertise__span{
-                text-transform: uppercase;
-                letter-spacing: 2px;
+            @include tablet {
+                width: 55%;
+
+            }
+            img{
+                object-fit: cover;
+                @include mobile {
+                    width: 80%;
+                    height: 100%;
+                }
+                @include tablet {
+                    width: 77%;
+                    height: 70%;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include largeOrdi {
+                    width: 60%;
+                    height: 100%;
+                }
             }
         }
-        & .more-text--expertisepage {
+        & .second-element__text--expertise{
             display: flex;
             flex-direction: column;
-            gap: 20px;
             @include mobile {
-                width: 80%;
-                margin-top: nth($margin, 4);
+                width: 100%;
+                align-items: center;
+                padding: nth($padding, 2)*3 0 nth($padding, 4)*3.5 0;
             }
             @include tablet {
-                margin-top: 0;
+                align-items: flex-end;
+                gap: 10px;
+                width: 45%;
             }
             @include ordi {
-                width: 70%;
+                gap: 35px;
             }
             @include xlargeOrdi {
-                width: 50%;
+                gap: 50px;
+            }
+            h2{
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                @include mobile {
+                    width: 80%;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include xlargeOrdi {
+                    width: 50%;
+                }
+            }
+            & .more-text--expertisepage{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include mobile {
+                    width: 80%;
+                    margin-top: nth($margin, 4);
+                }
+                @include tablet {
+                    margin-top: 0;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include xlargeOrdi {
+                    width: 50%;
+                }
             }
         }
     }
+    & .third-element__expertisepage{
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+            padding-top: nth($padding, 4)*5;
+        }
+        @include tablet {
+            flex-direction: row;
+            padding: nth($padding, 4)*10 0
+        }
+        & .third-element__image--expertise{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mobile {
+                width: 100%;
+            }
+            @include tablet {
+                width: 55%;
+            }
+            img{
+                object-fit: cover;
+                @include mobile {
+                    width: 80%;
+                    height: 100%;
+                }
+                @include tablet {
+                    width: 77%;
+                    height: 70%;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include largeOrdi {
+                    width: 60%;
+                    height: 100%;
+                }
+            }
+        }
+        & .third-element__text--expertise{
+            display: flex;
+            flex-direction: column;
+            @include mobile {
+                width: 100%;
+                align-items: center;
+                padding: nth($padding, 2)*3 0 nth($padding, 4)*3.5 0;
+            }
+            @include tablet {
+                align-items: flex-start;
+                gap: 10px;
+                width: 45%;
+            }
+            @include ordi {
+                gap: 35px;
+            }
+            @include xlargeOrdi {
+                gap: 50px;
+            }
+            h2{
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                @include mobile {
+                    width: 80%;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include xlargeOrdi {
+                    width: 50%;
+                }
+            }
+            & .more-text--expertisepage{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include mobile {
+                    width: 80%;
+                    margin-top: nth($margin, 4);
+                }
+                @include tablet {
+                    margin-top: 0;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include xlargeOrdi {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

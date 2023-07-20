@@ -23,7 +23,44 @@
             }
         }
     }
-
+    & .second-element__expertisepage {
+        & .second-element__text--expertise {
+            font-family: 'Gotham Light';
+            & h2 {
+                font-family: 'NiteClub Normal';
+                font-weight: 400;
+                font-size: 30px;
+            }
+            & .more-text--expertisepage {
+                & .more-text-span--expertise {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    & .third-element__expertisepage {
+        & .third-element__text--expertise {
+            font-family: 'Gotham Light';
+            & h2 {
+                font-family: 'NiteClub Normal';
+                font-weight: 400;
+                font-size: 30px;
+            }
+            & .more-text--expertisepage {
+                & .more-text-span--expertise {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
 
 
 
