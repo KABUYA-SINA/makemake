@@ -6,6 +6,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import '../sass/pages/_draganddrop.scss';
 
 const DragAndDrop = () => {
+
     const [ imagesDragAndDrop, setImagesDragAndDrop ] = useState(DatasImages)
 
     return (

@@ -6,11 +6,11 @@ import '../sass/base/_base.scss';
 
 export const Home = () => {
   return (
-    <div className='home-container'>
+    <React.Fragment>
         <Header />
         <Homepage />
         <Footer/>
-    </div>
+    </React.Fragment>
   )
 }
 export default Home;

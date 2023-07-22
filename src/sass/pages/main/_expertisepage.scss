@@ -287,23 +287,100 @@
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    & .fourth-element__expertisepage {
+        display: flex;
+        background: $background-element;
+        @include mobile {
+            flex-direction: column;
+            padding-top: nth($padding, 4)*5;
+        }
+        @include tablet {
+            flex-direction: row-reverse;
+            padding: nth($padding, 4)*10 0;
+        }
+        & .fourth-element__image--expertise {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mobile {
+                width: 100%;
+            }
+            @include tablet {
+                width: 55%;
+            }
+            img {
+                object-fit: cover;
+                @include mobile {
+                    width: 80%;
+                    height: 100%;
+                }
+                @include tablet {
+                    width: 77%;
+                    height: 70%;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include largeOrdi {
+                    width: 60%;
+                    height: 100%;
+                }
+            }
+        }
+        & .fourth-element__text--expertise {
+            display: flex;
+            flex-direction: column;
+            @include mobile {
+                width: 100%;
+                align-items: center;
+                padding: nth($padding, 2)*3 0 nth($padding, 4)*3.5 0;
+            }
+            @include tablet {
+                align-items: flex-end;
+                gap: 10px;
+                width: 45%;
+            }
+            @include ordi {
+                gap: 35px;
+            }
+            @include xlargeOrdi {
+                gap: 50px;
+            }
+            & .title-epxertise {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                line-height: 31px;
+                @include mobile {
+                    width: 80%;
+                }
+                @include tablet {
+                    width: 50%;
+                }
+                & .title-expertise__span {
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+            & .more-text--expertisepage {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include mobile {
+                    width: 80%;
+                    margin-top: nth($margin, 4);
+                }
+                @include tablet {
+                    margin-top: 0;
+                }
+                @include ordi {
+                    width: 70%;
+                }
+                @include xlargeOrdi {
+                    width: 50%;
+                }
+            }
+        }
+    }
 
 }

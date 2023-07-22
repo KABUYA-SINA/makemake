@@ -6,11 +6,11 @@ import '../sass/base/_base.scss';
 
 export const Studio = () => {
   return (
-    <div className='studio-container'>
+    <React.Fragment>
       <Header />
       <Studiopage/>
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }
 export default Studio;

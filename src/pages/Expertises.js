@@ -6,11 +6,11 @@ import '../sass/base/_base.scss';
 
 export const Expertises = () => {
   return (
-    <div className='expertise-container'>
+    <React.Fragment>
       <Header />
       <Expertise/>
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }
 export default Expertises;

@@ -1,0 +1,16 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+
+.main-realisationpage{
+    @include mobile {
+        margin-top: nth($margin, 4)*7;
+    }
+    @include xlargeOrdi {
+        margin-top: nth($margin, 4)*10;
+    }
+
+
+
+
+}

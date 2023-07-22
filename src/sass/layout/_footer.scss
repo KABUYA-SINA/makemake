@@ -10,6 +10,7 @@
     background: $first-color;
     h1{
         text-transform: uppercase;
+        text-align: center;
         @include mobile{
             padding: nth($padding, 4)*5 0 ;
         }

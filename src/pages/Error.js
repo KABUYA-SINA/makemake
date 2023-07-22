@@ -6,13 +6,10 @@ import '../sass/pages/_error.scss';
 
 
 function Error () {
-
     const navigate = useNavigate()
-
     const handleClick = () => {
         navigate('/', {replace: true});
     }
-
     return (
         <div className='top-parent'>
             <div className='content'>
