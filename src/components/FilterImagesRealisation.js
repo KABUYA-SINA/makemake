@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import DatasImagesRealisation from '../data-image/DatasImagesRealisation';
 import Inputs from './input/Input';
+import Card from './Card';
+import ErrorData from '../pages/ErrorData';
+import { ErrorBoundary } from 'react-error-boundary';
 import '../sass/base/filter-typo.scss';
 import '../sass/pages/filter.scss';
 
@@ -50,8 +53,14 @@ const FilterImagesRealisation = () => {
                     ))}
                 </fieldset>
             </ul>
-            <ul>
-
+            <ul className='filter-realisation--images'>
+                <ErrorBoundary FallbackComponent={ErrorData} onReset={() => {}}>
+                    {
+                        data.map((carte, index) => (
+                            <Card key={index} image={carte.image} alt={carte.alt} title={carte.title}/>
+                        ))
+                    }
+                </ErrorBoundary>
             </ul>
         </div>
     )

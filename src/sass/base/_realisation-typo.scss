@@ -1,0 +1,23 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.main-realisationpage {
+    & .exception-realisationpage{
+        font-family: 'Blaak Thin';
+        & .exception-element {
+            font-weight: 400;
+            @include mobile {
+                font-size: 20px;
+                line-height: 25px;
+            }
+            @include tablet {
+                font-size: 35px;
+                line-height: 35px;
+            }
+            @include ordi {
+                font-size: 50px;
+                line-height: 55px;
+            }
+        }
+    }
+}

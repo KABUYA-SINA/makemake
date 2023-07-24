@@ -1,2 +1,19 @@
 @import '../utils/mixins';
 @import '../utils/variables';
+
+.filter-realisation{
+    & .filter-realisation--elements{
+        fieldset{
+            label{
+                font-size: 16px;
+                font-family: Gotham Light;
+            }
+            label:hover,
+            label:focus,
+            label:active{
+                font-family: Gotham Bold;
+                border-bottom: solid 1px;
+            }
+        }
+    }
+}

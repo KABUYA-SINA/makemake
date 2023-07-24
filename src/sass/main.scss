@@ -10,8 +10,9 @@
 @import "./base/studiopage-typo";
 @import "./base/collapse-typo";
 @import "./base/expertise-typo";
-@import "./base/realisations_typo";
 @import "./base/filter-typo.scss";
+@import "./base/card-typo";
+@import "./base/realisation-typo";
 
 
 @import "./layout/_header";
@@ -31,6 +32,7 @@
 @import "./pages/iconApplication";
 @import "./pages//collapse";
 @import "./pages//filter.scss";
+@import "./pages/card.scss";
 
 @import "./pages/arrows/arrows";
 @import "./pages/arrows/fullarrows";

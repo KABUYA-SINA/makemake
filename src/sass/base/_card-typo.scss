@@ -1,0 +1,12 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.card-realisation--boxes{
+    a{
+        & .hover-card{
+            font-family: "Gotham Bold";
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+}

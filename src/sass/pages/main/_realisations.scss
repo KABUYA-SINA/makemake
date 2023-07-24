@@ -9,6 +9,26 @@
     @include xlargeOrdi {
         margin-top: nth($margin, 4)*10;
     }
+    & .exception-realisationpage {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include mobile {
+            margin: nth($margin, 4)*5 0 nth($margin, 4)*2.5 0
+        }
+        @include tablet {
+            margin: nth($margin, 4)*10 0 nth($margin, 4)*6 0;
+        }
+        & .exception-element {
+            letter-spacing: 1px;
+            width: 80%;
+            text-align: center;
+            & .exception-img {
+                background: center / contain no-repeat url('../../../images/home/circle.webp');
+                padding: nth($padding, 4)+8.8 0;
+            }
+        }
+    }
 
 
 

@@ -1,0 +1,52 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.card-realisation--boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(.9);
+    transition: transform .2s ease-in-out;
+    @include mobile{
+        width: 100%;
+    }
+    @include tablet{
+        width: 45%;
+    }
+    & .link-card {
+        display: flex;
+        position: relative;
+        img{
+            object-fit: cover;
+            width: 100%;
+            @include mobile{
+                height: 265px;
+            }
+            @include tablet{
+                height: 100%;
+            }
+        }
+        & .hover-card{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            background-color: rgba(0, 0, 0, 0.82);
+            color: $white-color;
+        }
+    }
+}
+.card-realisation--boxes:hover,
+.card-realisation--boxes:active,
+.card-realisation--boxes:focus{
+    transform: scale(1.05);
+    & .hover-card {
+        opacity: 1;
+    }
+}

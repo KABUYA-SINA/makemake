@@ -1,23 +1,8 @@
 @import '../../utils/variables';
 @import '../../utils/mixins';
 
-.form-group {
-    @include display-flex-direction;
-    margin: nth($margin, 4) 0;
-
-    & .alert {
-        font-size: 12px;
-        padding: nth($padding, 1)-2;
-        color: red;
-        display: none;
-    }
-
-    input:invalid[focused="true"]~.alert {
-        display: block;
-    }
-
-    input:invalid[focused="true"] {
-        border: 1px solid red;
-        width: 100%;
-    }
+.form-group--input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
