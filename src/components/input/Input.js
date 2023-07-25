@@ -2,13 +2,13 @@ import React from 'react'
 
 const Input = (props) => {
 
-    const{onClick, label, ...inputProps} = props
+    const{onChange, label, ...inputProps} = props
 
     return (
-        <div className='form-group--input'>
+        <div className='form-group--input' >
             <input
                 {...inputProps}
-                // onClick={onClick}
+                onChange={onChange}
             />
             <label htmlFor={props.label}>{label}</label>
         </div>

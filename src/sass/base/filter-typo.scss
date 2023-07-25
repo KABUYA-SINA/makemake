@@ -4,16 +4,24 @@
 .filter-realisation{
     & .filter-realisation--elements{
         fieldset{
+            & .form-group--input:hover,
+            & .form-group--input:focus,
+            & .form-group--input:active {
+                label {
+                    font-family: Gotham Bold;
+                    border-bottom: solid 1px;
+                }
+            }
             label{
                 font-size: 16px;
                 font-family: Gotham Light;
             }
-            label:hover,
-            label:focus,
-            label:active{
-                font-family: Gotham Bold;
-                border-bottom: solid 1px;
-            }
+            // label:hover,
+            // label:focus,
+            // label:active{
+            //     font-family: Gotham Bold;
+            //     border-bottom: solid 1px;
+            // }
         }
     }
 }

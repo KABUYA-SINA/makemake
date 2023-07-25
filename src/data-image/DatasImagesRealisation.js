@@ -12,43 +12,64 @@ const DatasImagesRealisation = [
     id: 1,
     image: FirstImageFilter,
     alt: 'Caviste 75cl',
-    title: 'Caviste 75cl'
+    title: 'Caviste 75cl',
+    element : {
+      limit : ["Design papier", "Tout"]
+    }
   },
   {
     id: 2,
     image: SecondImageFilter,
     alt: 'Digital',
-    title: 'Digital'
+    title: 'Digital',
+    element : {
+      limit : ["Web design", "Tout"]
+    }
   },
   {
     id: 3,
     image: ThirdImageFilter,
     alt: 'Ordinateur',
-    title: 'Ordinateur'
+    title: 'Ordinateur',
+    element : {
+      limit : ["Identité de marque", "Design papier", "Tout"]
+    }
   },
   {
     id: 4,
     image: FourthImageFilter,
     alt: 'Koya',
-    title: 'Koya'
+    title: 'Koya',
+    element : {
+      limit : ["Web design", "Design papier", "Tout"]
+    }
   },
   {
     id: 5,
     image: FifthImageFilter,
     alt: 'Les marmots',
-    title: 'Les marmots'
+    title: 'Les marmots',
+    element : {
+      limit : ["Identité de marque", "Tout"]
+    }
   },
   {
     id: 6,
     image: SixthImageFilter,
     alt: 'Images',
-    title: 'Images'
+    title: 'Images',
+    element : {
+      limit : ["Identité de marque", "Tout"]
+    }
   },
   {
     id: 7,
     image: SeventhImageFilter,
     alt: 'Tags',
-    title: 'Tags'
+    title: 'Tags',
+    element : {
+      limit : ["Identité de marque", "Graphisme d'espace", "Tout"]
+    }
   }
 ]
 

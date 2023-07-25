@@ -10,34 +10,36 @@ import '../sass/pages/filter.scss';
 const FilterImagesRealisation = () => {
 
     const [data, setData] = useState(DatasImagesRealisation);
+    const [radioValue, setRadioValue] = useState('Tout')
+    const [buttonRadio, setButtonRadio] = useState(data.length)
 
     const input =[
         {
-            id: 1,
+            id: "Tout",
             type: 'radio',
             name: 'Tout',
-            label: 'Tout'
+            label: 'Tout',
         },
         {
-            id: 2,
+            id: "Design papier",
             type: 'radio',
             name: 'Design papier',
             label: 'Design papier'
         },
         {
-            id: 3,
+            id: "Graphisme d'espace",
             type: 'radio',
             name: "Graphisme d'espace",
             label: "Graphisme d'espace"
         },
         {
-            id: 4,
+            id: "Identité de marque",
             type: 'radio',
             name: 'Identité de marque',
             label: 'Identité de marque'
         },
         {
-            id: 5,
+            id: "Web design",
             type: 'radio',
             name: 'Web design',
             label: 'Web design'
@@ -49,14 +51,24 @@ const FilterImagesRealisation = () => {
             <ul className='filter-realisation--elements'>
                 <fieldset>
                     {input.map((i) => (
-                        <Inputs key={i.id} {...i} value={i.name} className="form-input"/>
+                        <Inputs
+                            key={i.id}
+                            {...i}
+                            value={i.name}
+                            name={'iRadio'}
+                            className="form-input"
+                            onChange={(e) => setRadioValue(e.target.id)}
+                        />
                     ))}
                 </fieldset>
             </ul>
             <ul className='filter-realisation--images'>
                 <ErrorBoundary FallbackComponent={ErrorData} onReset={() => {}}>
                     {
-                        data.map((carte, index) => (
+                        data
+                        .filter((image) => image.element.limit.includes(radioValue))
+                        .slice(0, buttonRadio)
+                        .map((carte, index) => (
                             <Card key={index} image={carte.image} alt={carte.alt} title={carte.title}/>
                         ))
                     }
