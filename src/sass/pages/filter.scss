@@ -3,6 +3,9 @@
 
 .filter-realisation{
     width: 100%;
+    @include mobile{
+        padding-bottom: nth($padding, 4)*2.5;
+    }
     & .filter-realisation--elements{
         display: flex;
         align-items: center;

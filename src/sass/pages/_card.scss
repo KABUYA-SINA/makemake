@@ -6,8 +6,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transform: scale(.9);
-    transition: transform .2s ease-in-out;
     @include mobile{
         width: 100%;
     }
@@ -45,7 +43,6 @@
 .card-realisation--boxes:hover,
 .card-realisation--boxes:active,
 .card-realisation--boxes:focus{
-    transform: scale(1.05);
     & .hover-card {
         opacity: 1;
     }
