@@ -7,21 +7,19 @@
             & .form-group--input:hover,
             & .form-group--input:focus,
             & .form-group--input:active {
-                label {
+                & .label-input {
                     font-family: Gotham Bold;
                     border-bottom: solid 1px;
                 }
             }
-            label{
+            & .label-input{
                 font-size: 16px;
                 font-family: Gotham Light;
             }
-            // label:hover,
-            // label:focus,
-            // label:active{
-            //     font-family: Gotham Bold;
-            //     border-bottom: solid 1px;
-            // }
+            input:checked~.label-input{
+                font-family: Gotham Bold;
+                border-bottom: solid 1px;
+            }
         }
     }
 }

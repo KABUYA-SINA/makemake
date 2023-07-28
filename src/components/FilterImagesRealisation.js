@@ -52,7 +52,7 @@ const FilterImagesRealisation = () => {
         setIsLoading(true);
         const loader = setTimeout(() =>{
             setIsLoading(false)
-        }, 250)
+        }, 350)
          return () => clearTimeout(loader)
     }, [])
 

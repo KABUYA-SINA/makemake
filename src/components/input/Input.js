@@ -10,7 +10,7 @@ const Input = (props) => {
                 {...inputProps}
                 onChange={onChange}
             />
-            <label htmlFor={props.label}>{label}</label>
+            <label htmlFor={props.label} className='label-input'>{label}</label>
         </div>
     )
 }

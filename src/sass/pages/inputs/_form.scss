@@ -1,13 +1,24 @@
 @import '../../utils/variables';
 @import '../../utils/mixins';
 
-//Realisation Input
+//realisation input
 .form-group--input{
     display: flex;
     align-items: center;
     gap: 10px;
+    input{
+        appearance: none;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #999;
+        transition: 0.2s all linear;
+    }
+    input:checked {
+        border: 6px solid $black-color;
+    }
 }
-//Footer Form
+//footer form
 .form-group {
     @include display-flex-direction;
     margin: nth($margin, 4) 0;
