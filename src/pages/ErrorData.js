@@ -18,16 +18,14 @@ function ErrorData  () {
             >
             <div className='content'>
                 <main>
-                    <div className='main-error'>
-                        <div className='main-error__pages'>
-                            <h1>500</h1>
-                            <p>
-                                Something went wrong with the server.
-                            </p>
-                            <Link to='/' onClick={handleClick}>
-                                <span className='btn-error'> Please return to Home page</span>
-                            </Link>
-                    </div>
+                    <div className='main-error__pages'>
+                        <h1>500</h1>
+                        <p>
+                            Something went wrong with the server.
+                        </p>
+                        <Link to='/' onClick={handleClick}>
+                            <span className='btn-error'> Please return to Home page</span>
+                        </Link>
                     </div>
                 </main>
             </div>

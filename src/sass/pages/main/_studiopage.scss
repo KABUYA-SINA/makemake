@@ -47,8 +47,7 @@
             }
         }
         & .first-element__text--studio{
-            display: flex;
-            flex-direction: column;
+            @include display-flex-direction;
             @include mobile {
                 width: 100%;
                 align-items: center;
@@ -56,14 +55,14 @@
             }
             @include tablet {
                 align-items: flex-start;
-                gap: 10px;
+                gap: nth($gap, 2);
                 width: 45%;
             }
             @include ordi {
-                gap: 35px;
+                gap: nth($gap, 4)*1.75;
             }
             @include xlargeOrdi {
-                gap: 50px;
+                gap: nth($gap, 4)*2.5;
             }
 
             h2{
@@ -77,9 +76,8 @@
                 }
             }
             & .more-text--studiopage{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+                @include display-flex-direction;
+                gap: nth($gap, 4);
                 @include mobile {
                     width: 80%;
                     margin-top: nth($margin, 4);
@@ -97,9 +95,7 @@
         }
     }
     & .second-element__studiopage{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include display-align-flex;
         background: $background-element;
         padding: nth($padding, 4)*10 0;
         position: relative;
@@ -141,11 +137,8 @@
     }
     & .third-element__studiopage{
         padding: nth($padding, 4)*2+10 0 nth($padding, 4)*5 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 40px;
+        @include dispaly-all;
+        gap: nth($gap, 4)*2;
         h2 {
             text-transform: uppercase;
         }
@@ -159,17 +152,13 @@
         }
     }
     & .fourth-element__studiopage{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display-all-center;
         background: $background-element;
         padding: nth($padding, 4)*3+15 0 nth($padding, 4)*5 0;
         & .fourth-element__studiopage--first{
             width: 80%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: 40px;
+            @include display-align-flex;
+            gap: nth($gap, 4)*2;
             h2{
                 text-transform: uppercase;
             }
@@ -184,9 +173,8 @@
                 }
             }
             & .fourth-element__studiopage--third {
-                display: flex;
-                align-items: center;
-                gap: 70px;
+                @include display-align;
+                gap: nth($gap, 4)*3.5;
                 @include mobile{
                     flex-direction: column;
                     width: 100%;
@@ -230,10 +218,8 @@
         }
     }
     & .fith-element__studiopage{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
+        @include display-align-flex;
+        gap: nth($gap, 4)*2;
         padding: nth($padding, 4)*5 0;
         h2{
             text-transform: uppercase;

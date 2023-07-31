@@ -1,11 +1,10 @@
 @import '../utils/variables';
 @import '../utils/mixins';
+@import '../animations/animation.scss';
 
 .main-loading {
     height: 268px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    @include display-start-center;
     position: relative;
     img{
         position: absolute;
@@ -41,12 +40,3 @@
     animation: main-loading 1.2s linear infinite;
 }
 
-@keyframes main-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}

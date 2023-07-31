@@ -7,16 +7,12 @@
         padding-bottom: nth($padding, 4)*2.5;
     }
     & .filter-realisation--elements{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display-all-center;
         fieldset{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include display-all-center;
             padding: nth($padding, 4)*2 0;
             width: 100%;
-            gap: 20px;
+            gap: nth($gap, 4);
             @include mobile{
                 flex-wrap: wrap;
             }
@@ -26,18 +22,13 @@
         }
     }
     & .filter-realisation--images{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display-all-center;
         @include mobile{
-            flex-wrap: wrap;
-            flex-direction: column;
+            @include wrap-direction;
         }
         @include tablet{
-            flex-wrap: wrap;
-            flex-direction: row;
-            gap: 50px
+            @include wrap-row;
+            gap: nth($gap, 4)*2.5;
         }
     }
-
 }

@@ -2,8 +2,7 @@
 @import '../utils/mixins';
 
 .icon-container{
-    display: flex;
-    align-items: center;
+    @include display-align;
         @include mobile{
             justify-content: space-evenly;
         }

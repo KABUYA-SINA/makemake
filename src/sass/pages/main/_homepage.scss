@@ -3,9 +3,7 @@
 
 .main-homepage{
     & .exception-homepage{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include display-align-flex;
         @include mobile{
             margin: nth($margin, 4)*5 0 nth($margin, 4)*2.5 0
         }
@@ -61,8 +59,7 @@
             }
         }
         & .first-element__text{
-            display: flex;
-            flex-direction: column;
+            @include display-flex-direction;
             @include mobile{
                 width: 100%;
                 align-items: center;
@@ -70,14 +67,14 @@
             }
             @include tablet{
                 align-items: flex-start;
-                gap: 10px;
+                gap: nth($gap, 2);
                 width: 45%;
             }
             @include ordi{
-                gap: 35px;
+                gap: nth($gap, 4)*1.75;
             }
             @include xlargeOrdi{
-                gap: 50px;
+                gap: nth($gap, 4)*2.5;
             }
             h2 {
                 text-transform: uppercase;
@@ -90,9 +87,8 @@
                 }
             }
             & .more-text--homepage{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+                @include display-flex-direction;
+                gap: nth($gap, 4);
                 @include mobile{
                     width: 80%;
                     margin-top: nth($margin, 4);
@@ -141,19 +137,16 @@
             top: -65px;
         }
         & .second-element__homepage--images{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            @include display-all-row;
             @include mobile{
-                gap: 10px;
+                gap: nth($gap, 2);
                 width: 200%;
                 position: relative;
                 left: -25%;
                 padding: 0;
             }
             @include tablet{
-                gap: 20px;
+                gap: nth($gap, 4);
                 width: 100%;
                 left: 0;
                 padding: 0 nth($padding, 4);
@@ -167,10 +160,7 @@
                         position: absolute;
                         height: 100%;
                         width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
+                        @include dispaly-all;
                         opacity: 0;
                         transition: all 0.3s ease-out;
                         background-color: rgba(0, 0, 0, 0.82);
@@ -221,10 +211,7 @@
     }
     & .third-element__homepage{
         padding: nth($padding, 4)+15 0 nth($padding, 4)*5 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        @include dispaly-all;
         h2{
             padding-bottom: nth($padding, 4)*2.5;
             text-transform: uppercase;

@@ -15,16 +15,14 @@ function Error () {
             <div className='content'>
                 <Header />
                 <main>
-                    <div className='main-error'>
-                        <div className='main-error__pages'>
-                            <h1>404</h1>
-                            <p>
-                                Oups! This is not the web page you are lookinf for.
-                            </p>
-                            <Link to='/' onClick={handleClick}>
-                                <span className='btn-error'> Please return to Home page</span>
-                            </Link>
-                        </div>
+                    <div className='main-error__pages'>
+                        <h1>404</h1>
+                        <p>
+                            Oups! This is not the web page you are lookinf for.
+                        </p>
+                        <Link to='/' onClick={handleClick}>
+                            <span className='btn-error'> Please return to Home page</span>
+                        </Link>
                     </div>
                 </main>
             </div>

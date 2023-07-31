@@ -6,3 +6,19 @@
         stroke-dashoffset: 1;
     }
 }
+
+@keyframes anim {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes main-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

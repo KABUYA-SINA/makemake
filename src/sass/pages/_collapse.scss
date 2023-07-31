@@ -2,15 +2,12 @@
 @import '../utils/mixins';
 
 .collapse{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    @include display-flex-direction;
+    gap: nth($gap, 4);
     border-top: solid 1px;
     padding: nth($padding, 3) nth($padding, 2);
     section{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include display-justify-space;
         h3 {
             text-transform: uppercase;
         }

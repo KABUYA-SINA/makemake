@@ -3,10 +3,7 @@
 
 
 .footer-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include dispaly-all;
     background: $first-color;
     h1{
         text-transform: uppercase;
@@ -44,8 +41,7 @@
             }
         }
         & .for_form{
-            display: flex;
-            justify-content: center;
+            @include display-justify;
                 @include mobile{
                     width: 100%;
                 }
@@ -77,7 +73,7 @@
                     }
                     & .form-group{
                         border-bottom: solid 2px $footer-text-underline;
-                        padding: nth($padding, 2) 0;
+                        padding: nth($padding, 4) 0;
                         @include mobile{
                             width: 100%;
                         }
@@ -89,7 +85,7 @@
                 & .second-for__form{
                     & .form-group{
                         border-bottom: solid 2px $footer-text-underline;
-                        padding: nth($padding, 2) 0;
+                        padding: nth($padding, 4) 0;
                         width: 100%;
                     }
                 }
@@ -150,6 +146,7 @@
                 }
                 & .btn-form{
                     text-align: center;
+                    margin-top: nth($margin, 2);
                     & .btn-submit{
                         text-transform: uppercase;
                         border-bottom: solid 2px $black-color;
@@ -163,8 +160,7 @@
     & .footer_details{
         width: 80%;
         overflow: hidden;
-        display: flex;
-        justify-content: space-around;
+        @include display-justify-around;
         border-top: solid 2px $footer-color;
         padding: nth($padding, 2)*8 0;
             @include mobile{
@@ -174,29 +170,25 @@
                 flex-direction: row;
             }
         & .text-more{
-            display: flex;
-            flex-direction: column;
+            @include display-flex-direction;
             @include mobile{
-                align-items: center;
-                justify-content: space-evenly;
+                @include align-justify-evenly;
                 height: 300px;
             }
             @include tablet{
-                align-items: flex-start;
-                justify-content: space-between;
+                @include align-start-justify-between;
                 height: 200px;
             }
             & .exception-react{
                 @include mobile{
-                    width: 50%;  //30
+                    width: 50%;
                 }
                 @include tablet{
                     width: 45%;
                 }
             }
             & .text-more_child{
-                display: flex;
-                flex-direction: column;
+                @include display-flex-direction;
                 @include mobile{
                     align-items: center;
                 }
@@ -206,15 +198,12 @@
             }
         }
         & .footer_elements{
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 50px;
+            @include display-align-flex-end;
+            gap: nth($gap, 4)*2.5;
             width: 50%;
                 @include mobile{
                     width: 100%;
-                    justify-content: center;
-                    align-items: flex-start;
+                    @include align-start-justify;
                 }
                 @include tablet{
                     width: 50%;
@@ -225,9 +214,6 @@
                 height: 100%;
                 h3{
                     padding: 0 0 nth($padding, 4) 0
-                }
-                ol {
-                    list-style-type: none;
                 }
             }
 

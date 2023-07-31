@@ -2,9 +2,7 @@
 @import '../utils/mixins';
 
 .card-realisation--boxes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display-all-center;
     cursor: pointer;
     @include mobile{
         width: 100%;
@@ -29,10 +27,7 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include dispaly-all;
             opacity: 0;
             transition: all 0.3s ease-out;
             background-color: rgba(0, 0, 0, 0.82);

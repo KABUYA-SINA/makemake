@@ -1,13 +1,10 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 @import '../base/header';
-
-
+@import '../animations/animation.scss';
 
 .header-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-justify-space;
     width: 100%;
     padding: nth($padding, 3);
     position: fixed;
@@ -27,14 +24,12 @@
             width: 60%;
         }
         & a {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            @include display-align-flex-end;
             img{
                 object-fit: cover;
                 height: 100%;
                 @include mobile{
-                    width: 50%; //40
+                    width: 50%;
                 }
                 @include ordi{
                     width: 25%;
@@ -50,35 +45,31 @@
             left: 0;
         }
         ul{
-            display: flex;
-            align-items: center;
-                @include mobile{
-                    position: fixed;
-                    left: 100%;
-                    top: 0;
-                    gap: 40px;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    width: 100%;
-                    height: 100vh;
-                    text-align: center;
-                    transition:  0.3s ease-in-out;
-                    background: $white-color;
-                    z-index: 1;
-                }
-                @include ordiBurger {
-                    justify-content: center;
-                    position: relative;
-                    left: 0;
-                    top: 0;
-                    flex-direction: row;
-                    height: auto;
-                    gap: 0;
-                }
+            @include display-align;
+            @include mobile{
+                position: fixed;
+                left: 100%;
+                top: 0;
+                gap: nth($gap, 4)*2;
+                @include direction-justify;
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                transition:  0.3s ease-in-out;
+                background: $white-color;
+                z-index: 1;
+            }
+            @include ordiBurger {
+                @include justify-row;
+                position: relative;
+                left: 0;
+                top: 0;
+                height: auto;
+                gap: 0;
+            }
             & .burger-next{
                 @include mobile{
-                    display: flex;
-                    justify-content: flex-end;
+                    @include display-justify-end;
                     padding: nth($padding, 4);
                     width: 100%;
                 }
@@ -109,7 +100,6 @@
             }
         }
     }
-
 }
 
 .nav-active {
@@ -122,23 +112,11 @@
         background-color: $orange-color;
         position: absolute;
         border-radius: 10px;
-        bottom: -11px; //0px
+        bottom: -11px;
         left: 50%;
         transform: translateX(-50%);
         -webkit-animation: anim 0.3s ease forwards;
         animation: anim 0.6s ease forwards;
-
-        @-webkit-keyframes anim {
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes anim {
-            to {
-                width: 100%;
-            }
-        }
     }
 }
 

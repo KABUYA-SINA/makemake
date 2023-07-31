@@ -1,7 +1,6 @@
 @import '../../utils/variables';
 @import '../../utils/mixins';
 
-
 .main-expertisepage{
     @include mobile {
         margin-top: nth($margin, 4)*7;
@@ -19,9 +18,7 @@
             padding-bottom: nth($padding, 4)*10;
         }
         & .first-element__image--expertise {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include display-all-center;
             @include mobile {
                 width: 100%;
             }
@@ -49,8 +46,7 @@
             }
         }
         & .first-element__text--expertise {
-            display: flex;
-            flex-direction: column;
+            @include display-flex-direction;
             @include mobile {
                 width: 100%;
                 align-items: center;
@@ -58,19 +54,17 @@
             }
             @include tablet {
                 align-items: flex-start;
-                gap: 10px;
+                gap: nth($gap, 2);
                 width: 45%;
             }
             @include ordi {
-                gap: 35px;
+                gap: nth($gap, 4)*1.75;
             }
             @include xlargeOrdi {
-                gap: 50px;
+                gap: nth($gap, 4)*2.5;
             }
             & .title-epxertise {
-                display: flex;
-                align-items: flex-start;
-                flex-direction: column;
+                @include display-align-start-direction;
                 line-height: 31px;
                 @include mobile {
                     width: 80%;
@@ -84,9 +78,8 @@
                 }
             }
             & .more-text--expertisepage {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+                @include display-flex-direction;
+                gap: nth($gap, 4);
                 @include mobile {
                     width: 80%;
                     margin-top: nth($margin, 4);
@@ -115,9 +108,7 @@
             padding: nth($padding, 4)*10 0;
         }
         & .second-element__image--expertise{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include display-all-center;
             @include mobile {
                 width: 100%;
             }
@@ -145,8 +136,7 @@
             }
         }
         & .second-element__text--expertise{
-            display: flex;
-            flex-direction: column;
+            @include display-flex-direction;
             @include mobile {
                 width: 100%;
                 align-items: center;
@@ -154,14 +144,14 @@
             }
             @include tablet {
                 align-items: flex-end;
-                gap: 10px;
+                gap: nth($gap, 2);
                 width: 45%;
             }
             @include ordi {
-                gap: 35px;
+                gap: nth($gap, 4)*1.75;
             }
             @include xlargeOrdi {
-                gap: 50px;
+                gap: nth($gap, 4)*2.5
             }
             h2{
                 text-transform: uppercase;
@@ -177,9 +167,8 @@
                 }
             }
             & .more-text--expertisepage{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+                @include display-flex-direction;
+                gap: nth($gap, 4);
                 @include mobile {
                     width: 80%;
                     margin-top: nth($margin, 4);
@@ -207,9 +196,7 @@
             padding: nth($padding, 4)*10 0
         }
         & .third-element__image--expertise{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include display-all-center;
             @include mobile {
                 width: 100%;
             }
@@ -236,8 +223,7 @@
             }
         }
         & .third-element__text--expertise{
-            display: flex;
-            flex-direction: column;
+            @include display-flex-direction;
             @include mobile {
                 width: 100%;
                 align-items: center;
@@ -245,14 +231,14 @@
             }
             @include tablet {
                 align-items: flex-start;
-                gap: 10px;
+                gap: nth($gap, 2);
                 width: 45%;
             }
             @include ordi {
-                gap: 35px;
+                gap: nth($gap, 4).175;
             }
             @include xlargeOrdi {
-                gap: 50px;
+                gap: nth($gap, 4)*2.5;
             }
             h2{
                 text-transform: uppercase;
@@ -268,9 +254,8 @@
                 }
             }
             & .more-text--expertisepage{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+                @include display-flex-direction;
+                gap: nth($gap, 4);
                 @include mobile {
                     width: 80%;
                     margin-top: nth($margin, 4);
@@ -299,9 +284,7 @@
             padding: nth($padding, 4)*10 0;
         }
         & .fourth-element__image--expertise {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include display-all-center;
             @include mobile {
                 width: 100%;
             }
@@ -328,8 +311,7 @@
             }
         }
         & .fourth-element__text--expertise {
-            display: flex;
-            flex-direction: column;
+            @include display-flex-direction;
             @include mobile {
                 width: 100%;
                 align-items: center;
@@ -337,19 +319,17 @@
             }
             @include tablet {
                 align-items: flex-end;
-                gap: 10px;
+                gap: nth($gap, 2);
                 width: 45%;
             }
             @include ordi {
-                gap: 35px;
+                gap: nth($gap, 4)*1.75;
             }
             @include xlargeOrdi {
-                gap: 50px;
+                gap: nth($gap, 4)*2.5;
             }
             & .title-epxertise {
-                display: flex;
-                align-items: flex-start;
-                flex-direction: column;
+                @include display-align-start-direction;
                 line-height: 31px;
                 @include mobile {
                     width: 80%;
@@ -363,9 +343,8 @@
                 }
             }
             & .more-text--expertisepage {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+                @include display-flex-direction;
+                gap: nth($gap, 4);
                 @include mobile {
                     width: 80%;
                     margin-top: nth($margin, 4);
@@ -382,5 +361,4 @@
             }
         }
     }
-
 }

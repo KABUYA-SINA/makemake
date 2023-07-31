@@ -3,9 +3,7 @@
 @import '../../animations/animation.scss';
 
 .second-element--arrow{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include display-justify-space;
     border-bottom: solid 2px ;
     cursor: pointer;
     @include mobile{

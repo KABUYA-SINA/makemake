@@ -10,9 +10,7 @@
         margin-top: nth($margin, 4)*10;
     }
     & .exception-realisationpage {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include display-align-flex;
         @include mobile {
             margin: nth($margin, 4)*5 0 nth($margin, 4)*2.5 0
         }
@@ -29,8 +27,4 @@
             }
         }
     }
-
-
-
-
 }
