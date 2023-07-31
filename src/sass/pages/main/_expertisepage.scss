@@ -334,7 +334,10 @@
                 @include mobile {
                     width: 80%;
                 }
-                @include tablet {
+                @include ordi {
+                    width: 70%;
+                }
+                @include xlargeOrdi {
                     width: 50%;
                 }
                 & .title-expertise__span {
