@@ -2,7 +2,7 @@
 @import '../utils/mixins';
 @import '../animations/animation.scss';
 
-.main-loading {
+.main-loading, .loading {
     height: 268px;
     @include display-start-center;
     position: relative;
@@ -28,7 +28,7 @@
     }
 }
 
-.main-loading::after {
+.main-loading::after, .loading::after {
     content: " ";
     display: block;
     width: 50px;
@@ -40,3 +40,6 @@
     animation: main-loading 1.2s linear infinite;
 }
 
+.loading{
+    align-items: center;
+}

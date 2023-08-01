@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import DatasImagesRealisation from '../data-image/DatasImagesRealisation';
+import React, { useState } from 'react';
 import Inputs from './input/Input';
 import Card from './Card';
 import ErrorData from '../pages/ErrorData';
 import { ErrorBoundary } from 'react-error-boundary';
+import { useFetch } from '../services/useFetch';
 import Loader from './Loader';
 import '../sass/base/filter-typo.scss';
 import '../sass/pages/filter.scss';
 
 const FilterImagesRealisation = () => {
 
-    const [data, setData] = useState(DatasImagesRealisation);
+    const { data, isLoading, error } = useFetch(process.env.REACT_APP_API_REALISATION);
+    const imageRealisation = data
+
     const [radioValue, setRadioValue] = useState('Tout')
-    const [buttonRadio, setButtonRadio] = useState(data.length)
-     const [isLoading, setIsLoading] = useState(false);
+    const [buttonRadio, setButtonRadio] = useState(imageRealisation.length)
 
     const input =[
         {
@@ -48,18 +49,12 @@ const FilterImagesRealisation = () => {
         }
     ]
 
-    useEffect(() =>{
-        setIsLoading(true);
-        const loader = setTimeout(() =>{
-            setIsLoading(false)
-        }, 350)
-         return () => clearTimeout(loader)
-    }, [])
+    if(error)return <ErrorData />;
 
     return (
         <>
             { isLoading ?
-                (<Loader />)
+                (<Loader data-testid="loader" />)
                 :
                 (<div className='filter-realisation'>
                     <ul className='filter-realisation--elements'>
@@ -80,7 +75,7 @@ const FilterImagesRealisation = () => {
                     <ul className='filter-realisation--images'>
                         <ErrorBoundary FallbackComponent={ErrorData} onReset={() => {}}>
                             {
-                                data
+                                imageRealisation
                                 .filter((image) => image.element.limit.includes(radioValue))
                                 .slice(0, buttonRadio)
                                 .map((carte, index) => (
