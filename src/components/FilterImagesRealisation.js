@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { getRealisationImages } from '../services/imageRealisation';
 import Inputs from './input/Input';
 import Card from './Card';
 import ErrorData from '../pages/ErrorData';
 import { ErrorBoundary } from 'react-error-boundary';
-import { useFetch } from '../services/useFetch';
 import Loader from './Loader';
 import '../sass/base/filter-typo.scss';
 import '../sass/pages/filter.scss';
 
+
+
 const FilterImagesRealisation = () => {
 
-    const { data, isLoading, error } = useFetch(process.env.REACT_APP_API_REALISATION);
-    const imageRealisation = data
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
 
     const [radioValue, setRadioValue] = useState('Tout')
-    const [buttonRadio, setButtonRadio] = useState(imageRealisation.length)
+    const [buttonRadio, setButtonRadio] = useState([])
 
     const input =[
         {
@@ -49,7 +51,17 @@ const FilterImagesRealisation = () => {
         }
     ]
 
-    if(error)return <ErrorData />;
+    useEffect(() =>{
+        setIsLoading(true)
+        getRealisationImages().then((res) =>{
+            setData(res.data)
+            setButtonRadio(data.length)
+            setIsLoading(false)
+        })
+    }, [data.length])
+
+    const imageRealisation = data
+
 
     return (
         <>
@@ -78,8 +90,8 @@ const FilterImagesRealisation = () => {
                                 imageRealisation
                                 .filter((image) => image.element.limit.includes(radioValue))
                                 .slice(0, buttonRadio)
-                                .map((carte, index) => (
-                                    <Card key={index} image={carte.image} alt={carte.alt} title={carte.title}/>
+                                .map((carte, index, _id) => (
+                                    <Card key={index} id={carte._id} image={carte.image} alt={carte.alt} title={carte.title} />
                                 ))
                             }
                         </ErrorBoundary>
