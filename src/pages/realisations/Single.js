@@ -9,6 +9,7 @@ import Footer from '../../components/Footer';
 import { ErrorBoundary } from 'react-error-boundary';
 import LoaderData from '../../components/LoaderData';
 import ErrorData from '../ErrorData';
+import '../../sass/pages/realisation/_single.scss';
 
 
 const Single = () => {
@@ -49,38 +50,40 @@ const Single = () => {
                                     )
                                 }
                             </div>
-                            <Heading
-                                title={text?.title}
-                                span={text?.span}
-                                text={text?.text}
-                                secondText={text?.secondText}
-                            />
-                            <section className='image-single'>
-                                <div className="image-single--first">
-                                    {
-                                        firstChild?.map((image, id) => (
-                                            <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
+                            <div className="separator-single">
+                                <Heading
+                                    title={text?.title}
+                                    span={text?.span}
+                                    text={text?.text}
+                                    secondText={text?.secondText}
+                                />
+                                <section className='image-single'>
+                                    <div className="image-single--first">
+                                        {
+                                            firstChild?.map((image, id) => (
+                                                <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
+                                                )
                                             )
-                                        )
-                                    }
-                                </div>
-                                <div className="image-single--second">
-                                    {
-                                        secondChild?.map((image, id) => (
-                                            <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
+                                        }
+                                    </div>
+                                    <div className="image-single--second">
+                                        {
+                                            secondChild?.map((image, id) => (
+                                                <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
+                                                )
                                             )
-                                        )
-                                    }
-                                </div>
-                                <div className="image-single--third">
-                                    {
-                                        thirdChild?.map((image, id) => (
-                                            <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
+                                        }
+                                    </div>
+                                    <div className="image-single--third">
+                                        {
+                                            thirdChild?.map((image, id) => (
+                                                <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
+                                                )
                                             )
-                                        )
-                                    }
-                                </div>
-                            </section>
+                                        }
+                                    </div>
+                                </section>
+                            </div>
                         </>
                     }
                 </ErrorBoundary>

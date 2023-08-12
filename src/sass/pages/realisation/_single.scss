@@ -1,0 +1,140 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.main-single{
+    @include dispaly-all;
+    gap: nth($gap, 4)*4;
+    @include mobile {
+        margin-top: nth($margin, 4)*7;
+    }
+    @include xlargeOrdi {
+        margin-top: nth($margin, 4)*10;
+    }
+    & .banner-single{
+        width: 95%;
+        img{
+            @include mobile{
+                width: 95%;
+            }
+            @include tablet{
+                width: 100%;
+            }
+        }
+    }
+    & .separator-single{
+        background: $background-element;
+        padding: nth($padding, 4)*2.5 0;
+        & .heading {
+            width: 100%;
+            display: flex;
+            padding: nth($padding, 4)*1.5 0;
+            @include mobile{
+                @include column-center;
+            }
+            @include tablet{
+                @include row-start;
+                gap: nth($gap, 4)*1.5;
+            }
+            & .heading-head {
+                display: flex;
+                @include direction-justify;
+                @include mobile{
+                    width: 90%;
+                    align-items: flex-start;
+                }
+                @include tablet{
+                    width: 50%;
+                    align-items: flex-end;
+                }
+                & .heading-head--text{
+                    @include mobile{
+                        width: 100%;
+                    }
+                    @include tablet{
+                        width: 70%;
+                    }
+                    @include largeOrdi{
+                        width: 50%;
+                    }
+                    @include xlargeOrdi{
+                        width: 30%;
+                    }
+                    h1 {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            & .text--heading {
+                @include column-start-end;
+                gap: nth($gap, 4);
+                @include mobile{
+                    width: 90%;
+                }
+                @include tablet{
+                    width: 50%;
+                }
+                & .copy-heading{
+                    @include mobile{
+                        margin-block-start: 0em; //.95
+                        margin-block-end: 0em;
+                        margin-inline-start: 0px;
+                    }
+                    @include tablet{
+                        margin-block-start: 1.37em;
+                        margin-block-end: 1.37em;
+                    }
+                }
+                p{
+                    @include mobile{
+                        width: 100%;
+                    }
+                    @include tablet{
+                        width: 60%;
+                    }
+                    @include xlargeOrdi {
+                        width: 51%;
+                    }
+                }
+            }
+        }
+        & .image-single {
+            @include display-align-flex;
+            width: 100%;
+            margin-top: nth($margin, 4)*4;
+            & .image-single--first{
+                @include dispaly-all;
+                gap: nth($gap, 4)*3.5;
+                @include mobile{
+                    width: 90%;
+                }
+                @include tablet{
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            & .image-single--second{
+                @include display-all-center;
+                gap: nth($gap, 4)*2.5;
+                padding: nth($padding, 4)*2.5 0;
+                @include mobile {
+                    width: 95%;
+                }
+                @include tablet {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            & .image-single--third{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}

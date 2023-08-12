@@ -1,0 +1,21 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.heading{
+    & .heading-head{
+        h1{
+            font-family: 'NiteClub Normal';
+            font-size: 40px; //30
+        }
+        & .heading-element{
+            font-family: Gotham Bold;
+            font-size: 18px;
+        }
+    }
+    & .text--heading{
+        p{
+            font-family: Gotham Light;
+            font-size: 13px;
+        }
+    }
+}

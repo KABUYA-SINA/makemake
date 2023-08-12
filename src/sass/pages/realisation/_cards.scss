@@ -1,0 +1,11 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+
+.card{
+    @include display-all-center;
+    img{
+        object-fit: cover;
+        height: 100%;
+    }
+}
