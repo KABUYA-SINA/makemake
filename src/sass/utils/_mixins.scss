@@ -132,6 +132,12 @@
     flex-direction: column;
 }
 
+@mixin display-column-start{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 @mixin display-justify-space {
     display: flex;
     align-items: center;

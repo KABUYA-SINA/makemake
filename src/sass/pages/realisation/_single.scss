@@ -24,6 +24,7 @@
     & .separator-single{
         background: $background-element;
         padding: nth($padding, 4)*2.5 0;
+        width: 100%;
         & .heading {
             width: 100%;
             display: flex;
@@ -36,17 +37,16 @@
                 gap: nth($gap, 4)*1.5;
             }
             & .heading-head {
-                display: flex;
-                @include direction-justify;
+                @include display-align-flex-end;
                 @include mobile{
                     width: 90%;
-                    align-items: flex-start;
                 }
                 @include tablet{
                     width: 50%;
-                    align-items: flex-end;
                 }
                 & .heading-head--text{
+                    @include display-column-start;
+                    gap: nth($gap, 2);
                     @include mobile{
                         width: 100%;
                     }
@@ -54,13 +54,17 @@
                         width: 70%;
                     }
                     @include largeOrdi{
-                        width: 50%;
+                        width: 55%;
                     }
                     @include xlargeOrdi{
-                        width: 30%;
+                        width: 45%;
                     }
                     h1 {
                         text-transform: uppercase;
+                        letter-spacing: 2px;
+                        @include tablet{
+                            width: 60%;
+                        }
                     }
                 }
             }
@@ -75,13 +79,13 @@
                 }
                 & .copy-heading{
                     @include mobile{
-                        margin-block-start: 0em; //.95
+                        margin-block-start: 0em;
                         margin-block-end: 0em;
                         margin-inline-start: 0px;
                     }
                     @include tablet{
-                        margin-block-start: 1.37em;
-                        margin-block-end: 1.37em;
+                        margin-block-start: 1.2em;
+                        margin-block-end: 1.2em;
                     }
                 }
                 p{
@@ -120,9 +124,11 @@
                 padding: nth($padding, 4)*2.5 0;
                 @include mobile {
                     width: 95%;
+                    flex-direction: column;
                 }
                 @include tablet {
                     width: 100%;
+                    flex-direction: row;
                 }
                 img {
                     width: 100%;
