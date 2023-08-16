@@ -3,6 +3,7 @@ import FirstImageExpertise from '../../images/expertise/expertise_img_one.webp';
 import SecondImageExpertise from '../../images/expertise/expertise_img_two.webp';
 import ThirdImageExpertise from '../../images/expertise/expertise_img-three.webp';
 import FourthImageExpertise from '../../images/expertise/expertise_img_four.webp';
+import Btn from '../input/btn';
 import '../../sass/pages/main/_expertisepage.scss';
 import '../../sass/base/_expertise-typo.scss';
 
@@ -13,6 +14,7 @@ const Expertises = () => {
       <section className='first-element__expertisepage'>
         <div className="first-element__image--expertise">
           <img src={FirstImageExpertise} alt='relaxation' />
+            <Btn title={'Nos réalisations'} link={process.env.REACT_APP_API_ENDPOINT_RR}/>
         </div>
         <div className="first-element__text--expertise">
           <div className="title-epxertise">
@@ -29,6 +31,7 @@ const Expertises = () => {
       <section className='second-element__expertisepage'>
         <div className="second-element__image--expertise">
           <img src={SecondImageExpertise} alt='multiple images' />
+          <Btn title={'Nos réalisations'} link={process.env.REACT_APP_END_KRIS}/>
         </div>
         <div className="second-element__text--expertise">
           <h2>Design print</h2>
@@ -42,6 +45,7 @@ const Expertises = () => {
       <section className='third-element__expertisepage'>
         <div className="third-element__image--expertise">
           <img src={ThirdImageExpertise} alt='ordinateur & mobile' />
+          <Btn title={'Nos réalisations'} link={process.env.REACT_APP_API_END_DESIGN}/>
         </div>
         <div className="third-element__text--expertise">
           <h2>Web Design</h2>
@@ -55,6 +59,7 @@ const Expertises = () => {
       <section className='fourth-element__expertisepage'>
         <div className="fourth-element__image--expertise">
           <img src={FourthImageExpertise} alt='deux hommes portant une télévision' />
+          <Btn title={'Nos réalisations'} link={process.env.REACT_APP_API_END_GRAPHIC}/>
         </div>
         <div className="fourth-element__text--expertise">
           <div className="title-epxertise">

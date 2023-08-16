@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-//import DatasImagesHome from '../../data-image/DatasImagesHome';
 import ErrorData from '../../pages/ErrorData';
-import { useFetch } from '../../services/useFetch';
 import { ErrorBoundary } from 'react-error-boundary';
+import { getHomeImages } from '../../services/imageRealisation';
 import Loader from '../LoaderData';
 import '../../sass/pages/main/_homepage.scss';
 import '../../sass/base/_homepage-typo.scss';
 
 
 const Homepage = () => {
-    const { data, isLoading, error } = useFetch(process.env.REACT_APP_API_HOME)
-    const imagesHome = Object.values(data);
 
-    if(error)return <ErrorData />;
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() =>{
+        setIsLoading(true)
+        getHomeImages().then((res) =>{
+            setData(res.data)
+            setIsLoading(false)
+        })
+    }, [])
+
+    const imagesHome = Object.values(data)
 
     return (
         <main className='main-homepage'>
@@ -29,7 +37,7 @@ const Homepage = () => {
                         <>
                             <section className='first-element__homepage'>
                                 <div className="first-element__image">
-                                    <img src={imagesHome[0].image} alt={imagesHome[0].alt} />
+                                    <img src={imagesHome[0]?.image} alt={imagesHome[0]?.alt} />
                                 </div>
                                 <div className="first-element__text">
                                     <h2>Le studio</h2>
@@ -39,7 +47,7 @@ const Homepage = () => {
                                         <p>Créateur d’identité de marque globale, nous révélons votre univers et vos valeurs, afin de les retranscrire sur des supports de communication adaptés. </p>
                                     </div>
                                     <div className='last-child__first-element'>
-                                        <Link to={process.env.REACT_APP_API_ENDPOINT_ONE}>
+                                        <Link to={process.env.REACT_APP_API_ENDPOINT_S}>
                                             L'histoire du studio
                                         </Link>
                                     </div>
@@ -48,60 +56,60 @@ const Homepage = () => {
                             <section className='second-element__homepage'>
                                 <div className="second-element__homepage--images">
                                     <div className="second-element__first--image">
-                                        <Link to={process.env.REACT_APP_API_ENDPOINT_TWO}>
+                                        <Link to={process.env.REACT_APP_API_ENDPOINT_SM}>
                                             <div className='second-element__all--text'>
                                                 <p>Marque Produit</p>
                                                 <p>Packaging</p>
                                                 <p>Illustration</p>
                                             </div>
                                             <div className="second-element__all--image">
-                                                <img src={imagesHome[1].image} alt={imagesHome[1].alt} />
+                                                <img src={imagesHome[1]?.image} alt={imagesHome[1]?.alt} />
                                             </div>
                                         </Link>
                                         <p className='second-element__title'>Les Marmots</p>
                                     </div>
                                     <div className="second-element__first--image">
-                                        <Link to={process.env.REACT_APP_API_ENDPOINT_THREE}>
+                                        <Link to={process.env.REACT_APP_API_ENDPOINT_SK}>
                                             <div className='second-element__all--text'>
                                                 <p>Marque Produit</p>
                                                 <p>Packaging</p>
                                                 <p>Illustration</p>
                                             </div>
                                             <div className="second-element__all--image">
-                                                <img src={imagesHome[2].image} alt={imagesHome[2].alt} />
+                                                <img src={imagesHome[2]?.image} alt={imagesHome[2]?.alt} />
                                             </div>
                                         </Link>
                                         <p className='second-element__title'>Koya</p>
                                     </div>
                                     <div className="second-element__first--image">
-                                        <Link to={process.env.REACT_APP_API_ENDPOINT_FOUR}>
+                                        <Link to={process.env.REACT_APP_API_ENDPOINT_T}>
                                             <div className='second-element__all--text'>
                                                 <p>Marque Produit</p>
                                                 <p>Packaging</p>
                                                 <p>Illustration</p>
                                             </div>
                                             <div className="second-element__all--image">
-                                                <img src={imagesHome[3].image} alt={imagesHome[3].alt} />
+                                                <img src={imagesHome[3]?.image} alt={imagesHome[3]?.alt} />
                                             </div>
                                         </Link>
                                         <p className='second-element__title'>Ville de Grenoble</p>
                                     </div>
                                     <div className="second-element__first--image">
-                                        <Link to={process.env.REACT_APP_API_ENDPOINT_FIVE}>
+                                        <Link to={process.env.REACT_APP_API_ENDPOINT_CS}>
                                             <div className='second-element__all--text'>
                                                 <p>Marque Produit</p>
                                                 <p>Packaging</p>
                                                 <p>Illustration</p>
                                             </div>
                                             <div className="second-element__all--image">
-                                                <img src={imagesHome[4].image} alt={imagesHome[4].alt} />
+                                                <img src={imagesHome[4]?.image} alt={imagesHome[4]?.alt} />
                                             </div>
                                         </Link>
                                         <p className='second-element__title'>Caviste 75cl</p>
                                     </div>
                                 </div>
                                 <div className='last-child__section-two'>
-                                    <Link to={process.env.REACT_APP_API_ENDPOINT_SIX}>
+                                    <Link to={process.env.REACT_APP_API_ENDPOINT_RR}>
                                         Toutes les réalisations
                                     </Link>
                                 </div>
@@ -109,17 +117,17 @@ const Homepage = () => {
                             <section className='third-element__homepage'>
                                 <h2>Expertises</h2>
                                 <div className="third-element__homepage--images">
-                                    <img src={imagesHome[5].image} alt={imagesHome[5].alt} />
+                                    <img src={imagesHome[5]?.image} alt={imagesHome[5]?.alt} />
                                 </div>
                                 <div className='last-child__section-three'>
-                                    <Link to={process.env.REACT_APP_API_ENDPOINT_SEVEN}>
+                                    <Link to={process.env.REACT_APP_API_ENDPOINT_EX}>
                                         découvrez-les
                                     </Link>
                                 </div>
                             </section>
                             <section className='fourth-element__homepage'>
                                 <div className="fourth-element__homepage--images">
-                                    <img src={imagesHome[6].image} alt={imagesHome[6].alt} />
+                                    <img src={imagesHome[6]?.image} alt={imagesHome[6]?.alt} />
                                 </div>
                             </section>
                         </>

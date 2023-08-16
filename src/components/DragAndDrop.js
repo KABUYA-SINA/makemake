@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ErrorData from '../pages/ErrorData';
 import { ErrorBoundary } from 'react-error-boundary';
-import { useFetch } from '../services/useFetch';
+import { getDragAndDrop } from '../services/imageRealisation';
 import Loader from './LoaderData';
 import '../sass/pages/_draganddrop.scss';
 
 const DragAndDrop = () => {
 
-    const { data, isLoading, error } = useFetch(process.env.REACT_APP_API_STUDIO)
-    const imagesDragAndDrop = Object.values(data)
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
 
-    if(error)return <ErrorData />;
+    useEffect(() =>{
+        setIsLoading(true)
+        getDragAndDrop().then((res) =>{
+            setData(res.data)
+            setIsLoading(false)
+        })
+    }, [])
+
+    const imagesDragAndDrop = Object.values(data)
 
     return (
         <div className='drag-and--drop' >

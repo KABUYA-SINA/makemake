@@ -1,0 +1,26 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.parent-btn{
+    .btn{
+        background: $black-color;
+        color: $white-color;
+        border-radius: 50%;
+        transform: rotateZ(10deg) scale(1);
+        transition: all .3s;
+        cursor: pointer;
+        position: absolute;
+
+        & .btn-line {
+            border-bottom: solid 2px $white-color;
+            padding: nth($padding, 1)+2 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.btn:hover {
+    transform: rotateZ(0deg) scale(1.1);
+    transition: all .3s ease-in-out;
+}

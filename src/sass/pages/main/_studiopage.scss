@@ -111,28 +111,10 @@
         @include ordi {
             top: -65px;
         }
-        & .second-element--btn{
-            background: $black-color;
-            color: $white-color;
-            border-radius: 50%;
-            height: 100px;
-            width: 300px;
-            transform: rotateZ(10deg) scale(1);
-            transition: all .3s;
-            cursor: pointer;
-            position: absolute;
+        & .btn{
+            @include btn-width-height;
             top: -5%;
             right: 10%;
-            & .btn-line{
-                border-bottom: solid 2px $white-color;
-                padding: nth($padding, 1)+2 0;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
-        }
-        & .second-element--btn:hover{
-            transform: rotateZ(0deg) scale(1.1);
-            transition: all .3s ease-in-out;
         }
     }
     & .third-element__studiopage{

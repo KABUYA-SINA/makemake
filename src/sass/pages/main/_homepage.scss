@@ -156,6 +156,7 @@
                 a{
                     color: $black-color;
                     position: relative;
+                    display: flex;
                     & .second-element__all--text{
                         position: absolute;
                         height: 100%;
