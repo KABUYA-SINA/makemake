@@ -14,11 +14,10 @@ const FilterImagesRealisation = () => {
 
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false)
-
     const [radioValue, setRadioValue] = useState('Tout')
     const [buttonRadio, setButtonRadio] = useState([])
 
-    const input =[
+    const input = [
         {
             id: "Tout",
             type: 'radio',
@@ -51,9 +50,9 @@ const FilterImagesRealisation = () => {
         }
     ]
 
-    useEffect(() =>{
+    useEffect(() => {
         setIsLoading(true)
-        getRealisationImages().then((res) =>{
+        getRealisationImages().then((res) => {
             setData(res.data)
             setButtonRadio(data.length)
             setIsLoading(false)
@@ -65,7 +64,7 @@ const FilterImagesRealisation = () => {
 
     return (
         <>
-            { isLoading ?
+            {isLoading ?
                 (<Loader data-testid="loader" />)
                 :
                 (<div className='filter-realisation'>
@@ -85,14 +84,14 @@ const FilterImagesRealisation = () => {
                         </fieldset>
                     </ul>
                     <ul className='filter-realisation--images'>
-                        <ErrorBoundary FallbackComponent={ErrorData} onReset={() => {}}>
+                        <ErrorBoundary FallbackComponent={ErrorData} onReset={() => { }}>
                             {
                                 imageRealisation
-                                .filter((image) => image.element.limit.includes(radioValue))
-                                .slice(0, buttonRadio)
-                                .map((carte, index, _id) => (
-                                    <Card key={index} id={carte._id} image={carte.image} alt={carte.alt} title={carte.title} />
-                                ))
+                                    .filter((image) => image.element.limit.includes(radioValue))
+                                    .slice(0, buttonRadio)
+                                    .map((carte, index, _id) => (
+                                        <Card key={index} id={carte._id} image={carte.image} alt={carte.alt} title={carte.title} />
+                                    ))
                             }
                         </ErrorBoundary>
                     </ul>

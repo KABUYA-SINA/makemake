@@ -39,13 +39,13 @@ const limiter = rateLimit({
     max: 100,
     message: "Too many requests have been sent please try again later.",
     standardHeaders: true,
-	legacyHeaders: false,
+    legacyHeaders: false,
 })
 
 
 //Enregistrement routes 
 app.use(xss())
-app.use(mongoSanitize({allowDots: true, replaceWith: '_',}))
+app.use(mongoSanitize({ allowDots: true, replaceWith: '_', }))
 app.use(limiter)
 app.use('/api/studio', RouteImages)
 app.use('/api/home', RouteImagesHome)

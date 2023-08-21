@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { getOnerealisationImage } from '../../services/imageRealisation';
 import Header from '../../components/Header';
@@ -9,6 +9,7 @@ import Footer from '../../components/Footer';
 import { ErrorBoundary } from 'react-error-boundary';
 import LoaderData from '../../components/LoaderData';
 import ErrorData from '../ErrorData';
+import '../../sass/base/_base.scss';
 import '../../sass/pages/realisation/_single.scss';
 
 
@@ -18,9 +19,9 @@ const Single = () => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false)
 
-    useEffect(() =>{
+    useEffect(() => {
         setIsLoading(true)
-        getOnerealisationImage(id).then((res) =>{
+        getOnerealisationImage(id).then((res) => {
             setData(res.data)
             setIsLoading(false)
         })
@@ -29,16 +30,16 @@ const Single = () => {
     const text = data.heading
     const imageRealisation = data.pictures
     const zeroChild = imageRealisation?.slice(0, 1)
-    const firstChild = imageRealisation?.slice(1,4)
-    const secondChild = imageRealisation?.slice(4,6)
+    const firstChild = imageRealisation?.slice(1, 4)
+    const secondChild = imageRealisation?.slice(4, 6)
     const thirdChild = imageRealisation?.slice(6, 7)
 
     return (
         <React.Fragment>
             <Header />
             <main className='main-single'>
-                <ErrorBoundary FallbackComponent={ErrorData} onReset={() => {}}>
-                    { isLoading ?
+                <ErrorBoundary FallbackComponent={ErrorData} onReset={() => { }}>
+                    {isLoading ?
                         <LoaderData data-testid='loader' />
                         :
                         <>
@@ -46,8 +47,7 @@ const Single = () => {
                                 {
                                     zeroChild?.map((image, id) => (
                                         <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
-                                        )
-                                    )
+                                    ))
                                 }
                             </div>
                             <div className="separator-single">
@@ -62,24 +62,21 @@ const Single = () => {
                                         {
                                             firstChild?.map((image, id) => (
                                                 <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
-                                                )
-                                            )
+                                            ))
                                         }
                                     </div>
                                     <div className="image-single--second">
                                         {
                                             secondChild?.map((image, id) => (
                                                 <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
-                                                )
-                                            )
+                                            ))
                                         }
                                     </div>
                                     <div className="image-single--third">
                                         {
                                             thirdChild?.map((image, id) => (
                                                 <Cards key={id} id={id} image={image.image} alt={image.alt} title={image.alt} />
-                                                )
-                                            )
+                                            ))
                                         }
                                     </div>
                                 </section>

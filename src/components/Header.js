@@ -9,7 +9,7 @@ import '../sass/layout/_header.scss';
 
 export const Header = () => {
     const [burger, setBurger] = useState(false)
-     const [isClass, setClass] = useState(false);
+    const [isClass, setClass] = useState(false);
 
     function handleBurger(){
         setBurger(!burger)
